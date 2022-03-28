@@ -1,0 +1,1250 @@
+<!doctype html>
+<html>
+<head>
+<style>
+@page { 
+size: letter landscape;
+margin:0;
+}
+table {
+font-family: Helvetica, sans-serif;
+font-size: 10px!important;
+margin:0px auto;
+}
+:root {
+/* Colores Texto: */
+--rojo: #FA3636;
+--negro: #060606;
+--amarillo: #FFF04F;
+--azul: #006DB2;
+--blanco: #FFFFFF;
+--unnamed-color-000000: #000000;
+/* Fuentes/texto Valores */
+--font-family-helvetica: Helvetica;
+--font-family-sans-serif: sans-serif;
+--font-style-normal: normal;
+--font-weight-600: 600px;
+--font-weight-bold: bold;
+--font-size-6: 6px;	
+--font-size-7: 7px;	
+--font-size-8: 8px;
+--font-size-9: 9px;
+--font-size-13: 13px;
+--character-spacing-0: 0px;
+--line-spacing-12: 12px;
+--line-spacing-13: 13px;
+--line-spacing-18: 18px;
+}
+/* Clases de Texto */	
+.txt-blanco {
+font-family: var(--font-family-helvetica);
+font-style: var(--font-style-normal);
+font-size: var(--font-size-8);
+line-height: var(--line-spacing-13);
+letter-spacing: var(--character-spacing-0);
+color: var(--blanco);
+}
+.txt-rojo {
+font-family: var(--font-family-helvetica);
+font-style: var(--font-style-normal);
+font-weight: var(--font-weight-bold);
+font-size: var(--font-size-9);
+line-height: var(--line-spacing-13);
+letter-spacing: var(--character-spacing-0);
+color: var(--rojo);
+}
+.txt-negro{
+font-family: var(--font-family-helvetica);
+font-style: var(--font-style-normal);
+font-size: var(--font-size-7);
+line-height: var(--line-spacing-13);
+letter-spacing: var(--character-spacing-0);
+color: var(--negro);
+}
+.txt-azul{
+font-family: var(--font-family-sans-serif);
+font-style: var(--font-style-normal);
+font-weight: var(--font-weight-bold);
+font-size: var(--font-size-9);
+line-height: var(--line-spacing-12);
+letter-spacing: var(--character-spacing-0);
+color: var(--azul);
+}
+#contenedor1{
+width:500px;
+}
+.cont1-space1{
+width:500px ;
+height:120px; 
+background-image: linear-gradient(270deg, #fbe131 0, #fbe131 50%, #fbe131 100%);
+}
+preImpreso .cont1-space1{
+display:none;
+}
+.cont1-space2{
+position: relative;
+width:500px ;
+height:110px; 
+background-color:#eaeaeb;
+}
+preImpreso .cont1-space2{
+display:none;
+}
+.cont1-space3{
+position: relative;
+width:500px ;
+height:170px;
+border-bottom-style: dotted;
+border-width: 2px;
+border-color:#eaeaeb;
+}
+preImpreso .cont1-space3{
+border-bottom-style: none;
+}	
+.cont1-space4{
+width: 500px;
+height: 345px;
+}
+preImpreso .cont1-space4{
+display:none;
+}	
+.cont1-numatencion{
+float: left;
+position: relative;
+top:15px;
+left: 70px;
+width: 180px;
+height:50px;
+}
+.cont1-sec3-timbre{
+float: right;
+position: relative;
+right: 10px;	
+width: 240px;
+height: 100px;
+}
+.cont1-sec4-lugar{
+float: left;
+position: relative;
+left: 10px;
+width: 235px;
+height: 140px;
+}
+.cont1-sec4-oficina{
+float: left;
+position: relative;
+left: 15px;
+width: 240px;
+height: 140px;
+}
+.cont1-sec4-pac{
+float: left;
+position: relative;
+left: 10px;
+width: 480px;
+height: 85px;
+border-width: 1px;	
+border-top-style: solid;
+border-bottom-style: solid;
+border-color:#eaeaeb;
+}
+.cont1-sec4-presencial{
+float: left;
+position: relative;
+left: 10px;	
+width: 480px;
+height:110px;
+}
+.img-telefono-blanco{
+float: left;
+width: 15px;
+height: 15px;
+background-repeat:no-repeat ;
+background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNDQ4IDQ0OCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmZmY7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQwMCwyNkg0OEE0OCw0OCwwLDAsMCwwLDc0VjQyNmE0OCw0OCwwLDAsMCw0OCw0OEg0MDBhNDgsNDgsMCwwLDAsNDgtNDhWNzRBNDgsNDgsMCwwLDAsNDAwLDI2Wk0zODMuNjEsMzMzLjM3bC0xNSw2NUExNSwxNSwwLDAsMSwzNTQsNDEwQzE5NCw0MTAsNjQsMjgwLjI5LDY0LDEyMGExNS42OCwxNS42OCwwLDAsMSwxMS42My0xNC42MWw2NS0xNUExOC4yMywxOC4yMywwLDAsMSwxNDQsOTBhMTYuMjcsMTYuMjcsMCwwLDEsMTMuNzksOS4wOWwzMCw3MEExOC4xNiwxOC4xNiwwLDAsMSwxODksMTc1YTE3LDE3LDAsMCwxLTUuNSwxMS42MWwtMzcuODksMzFBMjMxLjkyLDIzMS45MiwwLDAsMCwyNTYuMzksMzI4LjM5bDMxLTM3Ljg5QTE3LDE3LDAsMCwxLDI5OSwyODVhMTcuOSwxNy45LDAsMCwxLDUuOTEsMS4yMWw3MCwzMEExNi4yNSwxNi4yNSwwLDAsMSwzODQsMzMwLDE3LjQxLDE3LjQxLDAsMCwxLDM4My42MSwzMzMuMzdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yNikiLz48L3N2Zz4=");
+}
+.img-telefono-negro{
+float: left;
+width: 15px;
+height: 15px;
+background-repeat:no-repeat ;
+background-image: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJwaG9uZS1zcXVhcmUtYWx0IiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtcGhvbmUtc3F1YXJlLWFsdCBmYS13LTE0IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDQ0OCA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTQwMCAzMkg0OEE0OCA0OCAwIDAgMCAwIDgwdjM1MmE0OCA0OCAwIDAgMCA0OCA0OGgzNTJhNDggNDggMCAwIDAgNDgtNDhWODBhNDggNDggMCAwIDAtNDgtNDh6bS0xNi4zOSAzMDcuMzdsLTE1IDY1QTE1IDE1IDAgMCAxIDM1NCA0MTZDMTk0IDQxNiA2NCAyODYuMjkgNjQgMTI2YTE1LjcgMTUuNyAwIDAgMSAxMS42My0xNC42MWw2NS0xNUExOC4yMyAxOC4yMyAwIDAgMSAxNDQgOTZhMTYuMjcgMTYuMjcgMCAwIDEgMTMuNzkgOS4wOWwzMCA3MEExNy45IDE3LjkgMCAwIDEgMTg5IDE4MWExNyAxNyAwIDAgMS01LjUgMTEuNjFsLTM3Ljg5IDMxYTIzMS45MSAyMzEuOTEgMCAwIDAgMTEwLjc4IDExMC43OGwzMS0zNy44OUExNyAxNyAwIDAgMSAyOTkgMjkxYTE3Ljg1IDE3Ljg1IDAgMCAxIDUuOTEgMS4yMWw3MCAzMEExNi4yNSAxNi4yNSAwIDAgMSAzODQgMzM2YTE3LjQxIDE3LjQxIDAgMCAxLS4zOSAzLjM3eiI+PC9wYXRoPjwvc3ZnPg==");
+}	
+.img-sasipa{
+float: right;
+position: relative;
+top:75px;
+right: 5px;
+width: 90px;
+height: 20px;
+background-repeat:no-repeat ;
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAPCAYAAAC/UHJkAAAACXBIWXMAAAWJAAAFiQFtaJ36AAAB3klEQVRIieVVsUoDURCcxCJdwMLGJp0QJGARiH6GvyAi2NmIEMEutmJhbyHYiR9gLVoJWlhYmE4QW0GRuPL0Hm72zb7kREF0YLm7md3Zu71jD/IJOHHk8LlYzmhNEVkXkRrRYsyIyAbhc9FWWq5/XUSWiuOQpocR0DPDkTGGpcOiX1JnHpGfVVzNyd8116cjvMUOI0bDJK0lZemNswfxrleJxvLFqR/FjfKysZIbhjW5M4Zx6lVSo2vZ22bBbtZy004d4yy/U3BNkk+9WAL7nFpGG5AaXfdANC9Xc3XFd0iNF6HfIdECLghPh1F5n0gKRk4AeC3Oo15Jsj7QANDP6DkP3XsTwDbRvZpcP4Yhr6qTEKHNB6ZprnG/OHaJtzjD1j1j9BK1HEKfxXHvYdSXER+4BeDS5MwDOE8qfQ/2Ri06xpO9cebj5dn+LCf7ZQTcGoOrouhZ5dhB2GnbzxtGZ2/nLKkA9hIGqCUMxzVlPQ+yVGLcOEsuxKPDB5yw5ZSs5GGuba7D+QHxiDn7hGPQOceZ/pL7m7BGc0Rj4Q2QaQFbJqdL8kJMicikOtaJb8QC6c369/S1tzMYumqhld3aPw22D0qjzDB+M75lGN4C/Zf4C8O4L/5+LwCevuwC4A3vSU/uwNeUVgAAAABJRU5ErkJggg==");
+}
+.img-sec{
+float: right;
+position: relative;
+top: 60px;
+right: 15px;
+width: 50px;
+height: 20px;
+background-repeat:no-repeat;
+background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjAuNjkgNi42MSI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMwMTIxNWU7fS5jbHMtMntmaWxsOiMyZjkyZDA7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIwNi40LDk4LjE4YTIuODEsMi44MSwwLDAsMSwxLjMyLS4xOGMxLjY3LDAsMy4zNCwwLDUsMGExMy41MywxMy41MywwLDAsMSwwLDEuNTZxLTMuNTgsMC03LjE1LDBBMS40NiwxLjQ2LDAsMCwxLDIwNi40LDk4LjE4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNS41NyAtOTgpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjEzLjI5LDk4YzEuODksMCwzLjc3LDAsNS42NSwwLC4yOCwwLC41NSwwLC44MiwwcTAsLjc4LDAsMS41Ni0zLjIyLDAtNi40NywwUTIxMy4yOCw5OC44LDIxMy4yOSw5OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDUuNTcgLTk4KSIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIyMS44OSw5OC4xOGE1LjksNS45LDAsMCwxLDItLjE4Yy43OSwwLDEuNTksMCwyLjM4LDAsMCwuNDksMCwxLDAsMS40OC0xLDAtMiwwLTMsMGExLjY4LDEuNjgsMCwwLDAtMS42MywxLjA5LDIuODUsMi44NSwwLDAsMC0uMDgsMS4wOSwxLjU5LDEuNTksMCwwLDAsLjYsMS4yMSwxLjUsMS41LDAsMCwwLC45NS4yMWgzLjE5YTEyLjY3LDEyLjY3LDAsMCwxLDAsMS41MWgtMy43N2EyLjQ3LDIuNDcsMCwwLDEtMS43MS0uNTQsMywzLDAsMCwxLS45MS0yLjMyLDQuNSw0LjUsMCwwLDEsLjIxLTJBMywzLDAsMCwxLDIyMS44OSw5OC4xOFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDUuNTcgLTk4KSIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIwNS41NywxMDAuNTljMS43OCwwLDMuNTYsMCw1LjM0LDBhMywzLDAsMCwxLDEuMjMuMTcsMS4wNywxLjA3LDAsMCwxLC41OC45MiwxMy4zNywxMy4zNywwLDAsMSwwLDEuNzksMS4xMSwxLjExLDAsMCwxLS41OC45MywyLjc5LDIuNzksMCwwLDEtMS4zMS4yMkgyMDUuNmExMi43MSwxMi43MSwwLDAsMSwwLTEuMzhjMS42OSwwLDMuMzksMCw1LjA4LDBhLjUyLjUyLDAsMCwwLC40Ni0uODljLS4wOC0uMTYtLjMxLS4xMS0uNDYtLjEzSDIwNy4zYTEuNTQsMS41NCwwLDAsMS0xLjczLTEuNloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDUuNTcgLTk4KSIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTIxMy4zMSwxMDAuNjNjMS4zOSwwLDIuNzcsMCw0LjE2LDBhMi4xNywyLjE3LDAsMCwxLDEuMzYuMzksMS40OSwxLjQ5LDAsMCwxLC41MiwxLjE0Yy0xLjM0LDAtMi42NywwLTQsMGEyLjE1LDIuMTUsMCwwLDEtMS40NS0uMzZBMS43MiwxLjcyLDAsMCwxLDIxMy4zMSwxMDAuNjNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA1LjU3IC05OCkiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMTMuMjksMTAzYzIuMTYsMCw0LjMxLDAsNi40NywwLDAsLjU0LDAsMS4wNywwLDEuNjFIMjEzLjNDMjEzLjI3LDEwNC4wNywyMTMuMjgsMTAzLjU0LDIxMy4yOSwxMDNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA1LjU3IC05OCkiLz48L3N2Zz4=");
+}
+.img-tatencion{
+float: right;	
+position: relative;
+bottom:90px;
+right: 4px;	
+width: 52px;
+height: 80px;
+background-repeat:no-repeat;
+background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNjMuODEgODcuNzIiPjxkZWZzPjxzdHlsZT4uY2xzLTEsLmNscy00LC5jbHMtNXtmaWxsOiNmZmY7fS5jbHMtMntmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLXdpZHRoOjNweDt9LmNscy0zLC5jbHMtNCwuY2xzLTV7aXNvbGF0aW9uOmlzb2xhdGU7fS5jbHMtNHtmb250LXNpemU6OC41NnB4O30uY2xzLTQsLmNscy01e2ZvbnQtZmFtaWx5OkxlZWxhd2FkZWVVSS1Cb2xkLCBMZWVsYXdhZGVlIFVJO2ZvbnQtd2VpZ2h0OjcwMDt9LmNscy01e2ZvbnQtc2l6ZToyMS4zOXB4O308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0tMjA0Ljc0LTIuMWgyOC4yNkMtMTY5LjU3LTIuMS0xNjQsMy4wOC0xNjQsOS40NlY3Mi4zNWMwLDYuMzgtNS42LDExLjU1LTEyLjUxLDExLjU1aC0yOC4yNmMtNi45MSwwLTEyLjUxLTUuMTctMTIuNTEtMTEuNTVWOS40NkMtMjE3LjI1LDMuMDgtMjExLjY1LTIuMS0yMDQuNzQtMi4xWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjE4LjA1IDIuOTUpIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNLTIwNC43NC0xLjQ1aDI4LjI2YzYuNTIsMCwxMS44MSw0Ljg4LDExLjgxLDEwLjkxVjcyLjM1YzAsNi01LjI5LDEwLjkxLTExLjgxLDEwLjkxaC0yOC4yNmMtNi41MiwwLTExLjgxLTQuODgtMTEuODEtMTAuOTFWOS40NkMtMjE2LjU1LDMuNDMtMjExLjI2LTEuNDUtMjA0Ljc0LTEuNDVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTguMDUgMi45NSkiLz48cmVjdCB4PSI5LjE0IiB5PSI4Ljk5IiB3aWR0aD0iMzcuMDYiIGhlaWdodD0iMTkuMjUiLz48ZWxsaXBzZSBjeD0iNTEuMDciIGN5PSI0OS42MyIgcng9IjEyLjc0IiByeT0iMTEuOTgiLz48ZWxsaXBzZSBjeD0iMjcuNDQiIGN5PSI3My44MSIgcng9IjIuNTUiIHJ5PSIyLjM1Ii8+PGcgY2xhc3M9ImNscy0zIj48dGV4dCBjbGFzcz0iY2xzLTQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjYzIDIyLjI1KSBzY2FsZSgxLjA4IDEpIj4/ID8gPyA/PC90ZXh0PjwvZz48ZyBjbGFzcz0iY2xzLTMiPjx0ZXh0IGNsYXNzPSJjbHMtNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDYuNjcgNTguMTkpIHNjYWxlKDEuMDggMSkiPj88L3RleHQ+PC9nPjwvc3ZnPg==")
+}
+.img-lavadora{
+float: left;
+position: relative;
+top: 20px;
+left: 30px;
+width: 60px;
+height: 80px;
+background-repeat:no-repeat;
+background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBkYXRhLW5hbWU9IkNhcGEgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNDAwIDQ5NiI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM3MTcxNzI7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQ0OCw4SDY0YTgsOCwwLDAsMC04LDhWNDk2YTgsOCwwLDAsMCw4LDhINDQ4YTgsOCwwLDAsMCw4LThWMTZBOCw4LDAsMCwwLDQ0OCw4Wm0tOCw0ODBINzJWMTIwSDQ0MFptMC0zODRINzJWMjRINDQwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU2IC04KSIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQwOCwyMzJIMzg0YTgsOCwwLDAsMC04LDh2LjA2QTEzNi4xMywxMzYuMTMsMCwwLDAsMjU2LDE2OGMtNzUsMC0xMzYsNjEtMTM2LDEzNnM2MSwxMzYsMTM2LDEzNmExMzYuMTgsMTM2LjE4LDAsMCwwLDEyNC4zMy04MC45LDcuOTMsNy45MywwLDAsMCwzLjY3LjloMjRhOCw4LDAsMCwwLDgtOFYyNDBhOCw4LDAsMCwwLTgtOFpNMjU2LDQyNEExMjAsMTIwLDAsMSwxLDM3NiwzMDQsMTIwLDEyMCwwLDAsMSwyNTYsNDI0Wm0xNDQtODBoLThWMjQ4aDhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTYgLTgpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjU2LDIwMEExMDQsMTA0LDAsMSwwLDM2MCwzMDQsMTA0LDEwNCwwLDAsMCwyNTYsMjAwWm0wLDE2YTg4LjEyLDg4LjEyLDAsMCwxLDg3Ljg0LDgyLjc4Yy0xMi41Myw0Ljg1LTQ4Ljc0LDE1LjgzLTg0LjI2LTEuOTQtMzYuNDYtMTguMjItNzIuNDMtMTAuOTMtOTAuNzUtNC45QTg4LjE0LDg4LjE0LDAsMCwxLDI1NiwyMTZabTAsMTc2YTg4LjEyLDg4LjEyLDAsMCwxLTg3Ljg0LTgyLjc4YzEyLjUzLTQuODUsNDguNzQtMTUuODMsODQuMjYsMS45NGExMTAuNjQsMTEwLjY0LDAsMCwwLDQ5Ljg4LDExLjU2LDEzMi4zMSwxMzIuMzEsMCwwLDAsNDAuODctNi42NkE4OC4xNCw4OC4xNCwwLDAsMSwyNTYsMzkyWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU2IC04KSIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTEyOCw0MEg5NmE4LDgsMCwwLDAtOCw4VjgwYTgsOCwwLDAsMCw4LDhoMzJhOCw4LDAsMCwwLDgtOFY0OEE4LDgsMCwwLDAsMTI4LDQwWm0tOCwzMkgxMDRWNTZoMTZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTYgLTgpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTg0LDQwSDE1MmE4LDgsMCwwLDAtOCw4VjgwYTgsOCwwLDAsMCw4LDhoMzJhOCw4LDAsMCwwLDgtOFY0OEE4LDgsMCwwLDAsMTg0LDQwWm0tOCwzMkgxNjBWNTZoMTZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTYgLTgpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDE2LDQwSDI4OGE4LDgsMCwwLDAtOCw4VjgwYTgsOCwwLDAsMCw4LDhINDE2YTgsOCwwLDAsMCw4LThWNDhBOCw4LDAsMCwwLDQxNiw0MFptLTgsMzJIMjk2VjU2SDQwOFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01NiAtOCkiLz48L3N2Zz4=)	
+}
+.img-refrigerador{
+float: left;
+position: relative;
+top: 20px;	
+left: 60px;	
+width: 60px;
+height: 80px;
+background-repeat:no-repeat;
+background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iXzJfUFQiIGRhdGEtbmFtZT0iIDIgUFQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDMwNC40MyA0ODQuMzMiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojNzE3MTcxO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zODcuNDYsNDcwLjQ5SDEyNC41NGEyMC43NywyMC43NywwLDAsMS0yMC43Ni0yMC43NlYzNC41OWEyMC43NiwyMC43NiwwLDAsMSwyMC43Ni0yMC43NUgzODcuNDZhMjAuNzYsMjAuNzYsMCwwLDEsMjAuNzYsMjAuNzVWNDQ5LjczQTIwLjc3LDIwLjc3LDAsMCwxLDM4Ny40Niw0NzAuNDlaTTEyNC41NCwyNy42OGE2LjkxLDYuOTEsMCwwLDAtNi45Miw2LjkxVjQ0OS43M2E2LjkyLDYuOTIsMCwwLDAsNi45Miw2LjkySDM4Ny40NmE2LjkyLDYuOTIsMCwwLDAsNi45Mi02LjkyVjM0LjU5YTYuOTEsNi45MSwwLDAsMC02LjkyLTYuOTFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAzLjc4IC0xMy44NCkiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNjYuNyw0OTguMTZIMzMyLjExYTYuOTEsNi45MSwwLDAsMS02LjkyLTUuMjZsLTYuOTItMjcuNjdhNi44OCw2Ljg4LDAsMCwxLDYuOTItOC41OGg0OC40M2E2Ljg2LDYuODYsMCwwLDEsNi43MSw4LjU4bC02LjkyLDI3LjY3QTYuOTEsNi45MSwwLDAsMSwzNjYuNyw0OTguMTZabS0yOS4yLTEzLjg0aDIzLjY3bDMuNDYtMTMuODNIMzMzLjkxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMy43OCAtMTMuODQpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTc5Ljg5LDQ5OC4xNkgxNDUuM2E2LjkxLDYuOTEsMCwwLDEtNi45Mi01LjI2bC02LjkyLTI3LjY3YTYuODcsNi44NywwLDAsMSw2LjkyLTguNThoNDguNDNhNi44Niw2Ljg2LDAsMCwxLDYuNzEsOC41OEwxODYuNiw0OTIuOWE2LjkxLDYuOTEsMCwwLDEtNi43MSw1LjI2Wm0tMjkuMi0xMy44NGgyMy42N2wzLjQ2LTEzLjgzSDE0Ny4xWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMy43OCAtMTMuODQpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTEwLjU2LDE3OS44OWgyOTAuNnYxMy44NEgxMTAuNTZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAzLjc4IC0xMy44NCkiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xNjYuMDUsMTQ1LjNIMTUyLjIyVjEzMS40NmgxMy44M2E2LjkyLDYuOTIsMCwwLDAsNi45Mi02LjkyVjgzYTYuOTIsNi45MiwwLDAsMC02LjkyLTYuOTJIMTUyLjIyVjYyLjI3aDEzLjgzQTIwLjc1LDIwLjc1LDAsMCwxLDE4Ni44MSw4M3Y0MS41MUEyMC43NiwyMC43NiwwLDAsMSwxNjYuMDUsMTQ1LjNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAzLjc4IC0xMy44NCkiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xNjYuMDUsMzExLjM1SDE1Mi4yMlYyOTcuNTFoMTMuODNhNi45MSw2LjkxLDAsMCwwLDYuOTItNi45MlYyNDkuMDhhNi45Miw2LjkyLDAsMCwwLTYuOTItNi45MkgxNTIuMjJWMjI4LjMyaDEzLjgzYTIwLjc2LDIwLjc2LDAsMCwxLDIwLjc2LDIwLjc2djQxLjUxQTIwLjc1LDIwLjc1LDAsMCwxLDE2Ni4wNSwzMTEuMzVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAzLjc4IC0xMy44NCkiLz48L3N2Zz4=)
+}	
+#contenedor2{
+width:500px;
+}
+.cont2-space1{
+width:500px ;
+height:150px;
+border-bottom-style: dotted;
+border-width: 2px;
+border-color: #eaeaeb;
+}
+PreImpreso .cont2-space1{
+border-bottom-style: none;
+}	
+.cont2-space2{
+width:500px ;
+height:140px;
+border-bottom-style: dotted;
+border-width: 2px;
+border-color: #eaeaeb;
+padding-top: 5px;
+}
+PreImpreso .cont2-space2{
+border-bottom-style: none;
+}	
+.cont2-space3{
+width:500px ;
+height:60px; 
+}
+.cont2-space4{
+width:500px ;
+height:180px;
+background-image: radial-gradient(circle at 109.31% 50%, #ffe846 0, #fcdd31 25%, #f8d110 50%, #f4c500 75%, #f0ba00 100%);
+}
+PreImpreso .cont2-space4{
+background-image:none;	
+}	
+.cont2-space5{
+width:500px ;
+height:225px;
+background-color:#eaeaeb;
+border-top-style:dashed;
+border-width: 1px;
+border-color:red;
+}
+PreImpreso .cont2-space5{
+background-color: transparent;
+border-top-style:none;	
+}	
+#cont2-logo{
+float: left;
+width:220px;
+height: 120px;
+position: relative;
+}
+#cont2-doc{
+float: right;
+left: -10px;
+position: relative;
+width: 280px;
+height: 125px;
+}
+#cont2-csii{
+position: relative;
+top: -5px;
+right: 75px;
+width:250px;
+height: 20px;
+}
+#cont2-fechemi{
+position: relative;
+top: -2px;
+right: 5px;
+width:220px;
+height: 20px;
+}
+.cont2-cred {
+width: 230px;
+height: 55px;
+border: 2px solid #F90404;
+border-radius: 1px;
+}
+PreImpreso .cont2-cred{
+border:2px solid transparent;	
+}
+.cont2-ccliente1 {
+float: right;
+position: relative;
+top: -5px;
+width: 100px;
+height: 25px;
+background-color: #fbe131;
+border: 2px solid #fbe131;
+}
+PreImpreso .cont2-ccliente1{
+background-color:transparent;
+border:2px solid transparent;	
+}	
+.cont2-ccliente2 {
+float: right;
+position: relative;
+top: -5px;
+width: 125px;
+height: 25px;
+border: 2px solid #fbe131;
+display:block;
+}
+PreImpreso .cont2-ccliente2{
+border:2px solid transparent;
+}
+.cont2-dcliente{
+float: left;
+width:265px;
+height: 135px;
+position: relative;
+}
+.cont2-atencion{
+float: right;
+left: -20px;
+position: relative;
+width: 200px;
+height: 100px;	
+}
+.cont2-catencion{
+height: 90px;
+margin: 0 0 .8em 0;
+border-width: 2px;
+border-style: solid;		
+}
+.cont2-titloatencion{
+display: block;
+padding: .5em 1em;
+font-weight: 530;
+font-size: 1em;
+text-align:center;		
+}
+.cont2-txt{
+float: left;
+position: relative;
+width:190px;
+height:70px;
+left: 5px;
+line-height: 70%;
+font-size: 10px;
+}
+.cont2-sec3-text1{
+float:left;
+position: relative;
+left:10px;
+width:140px;
+height:45px;
+}
+.cont2-sec3-text2{
+float:left;
+position: relative;
+left: 60px;
+width:300px;
+height:60px;
+}
+.cont2-sec4-1{
+float:left;
+position:relative;
+width:100%;
+height:17px;
+background-color:#919190;		
+}
+PreImpreso .cont2-sec4-1{
+background-color: transparent;
+}
+.cont2-sec4-2{
+float: left;
+position: relative;	
+left: 15px;
+width: 145px;
+height: 150px;
+}
+.cont2-sec4-3{
+float: left;
+top: 34px;
+position: relative;
+background-color: #ffffff;
+width: 140px;
+height: 60px;
+border-radius: 4px;
+}
+PreImpreso .cont2-sec4-3{
+background-color: transparent;		
+}	
+.cont2-sec4-4{
+float: right;
+position: relative;
+right: 20px;
+top:5px;	
+width: 310px;
+height: 150px;
+}
+.cont2-sec4-5{
+width: 310px;
+height: 70px;
+margin-top: 7px;
+border-radius: 4px;
+background-color: #ffffff;
+}
+PreImpreso .cont2-sec4-5{
+background-color: transparent;		
+}	
+.cont2-sec4-6{
+width: 310px;
+height: 60px;
+margin-top: 7px;
+border-radius: 4px;
+background-color: #ffffff;
+}
+PreImpreso .cont2-sec4-6{
+background-color: transparent;		
+}		
+.cont2-sec5-1{
+float: left;
+position: relative;
+left: 15px;
+width: 105px;
+height: 50px;
+}	
+.cont2-sec5-fin2{
+float: left;
+position: relative;
+top:5px;	
+left: 10px;
+width: 380px;
+height: 165px;
+}
+.cont2-sec5-ini{
+float: left;
+position: relative;
+width: 350px;
+height: 20px;
+}
+.cont2-sec5-fin3{
+float: left;
+top: 10px;
+position: relative;
+background-color: #fff;
+width: 180px;
+height: 35px;
+border-radius: 4px;
+text-align: center;
+}
+PreImpreso .cont2-sec5-fin{
+background-color: transparent;
+}	
+.cont2-sec5-fin4{
+float: right;
+top: 10px;
+right: 15px;
+position: relative;
+background-color: #fff;
+width: 180px;
+height: 35px;
+border-radius: 4px;
+text-align: center;
+}
+PreImpreso .cont2-sec5-fin4{
+background-color: transparent;
+}	
+.cont2-sec5-fin5{
+float: left;
+position:relative;
+top:15px;	
+background-color: #fff;
+width: 365px;
+height: 40px;
+border-radius: 4px;
+}
+PreImpreso .cont2-sec5-fin5{
+background-color: transparent;
+}	
+.cont2-sec5-codbarra{
+float: left;
+position:relative;
+top:20px;		
+background-color: #ffffff;
+width: 365px;
+height: 70px;
+border-radius: 4px;
+}
+PreImpreso .cont2-sec5-codbarra{
+background-color: transparent;		
+}	
+.cont2-sec5-fin6{
+float: left;
+position: relative;
+top: 20px;
+left: 55px;
+width: 350px;
+height: 20px;
+}
+#contenedor3{
+width: 500px;
+}
+.cont3-space1{
+width:500px ;
+height:610px;
+}
+.cont3-space2{
+position: relative;
+width: 500px;
+height: 145px;
+border-top-style: dashed;
+border-color: #eaeaeb;	
+border-width: 1px;	
+}
+PreImpreso .cont3-space2{
+display:none;	
+}	
+.cont3-sec1-detalle{
+float: left;
+position: relative;
+top:10px;
+left: 10px;
+width: 480px;
+height: 360px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: dashed;
+border-left-style: solid;
+border-width: 2px;
+border-bottom-width: 1px;	
+border-color: #eaeaeb;	
+}
+PreImpreso .cont3-sec1-detalle{
+border-color: transparent;		
+}		
+.cont3-sec1-detalle2{
+float: left;
+position: relative;
+top:10px;
+left: 10px;
+width: 480px;
+height: 108px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-width: 2px;
+border-bottom-width: 1px;	
+border-color: #eaeaeb;	
+}
+PreImpreso .cont3-sec1-detalle2{
+border-color: transparent;		
+}	
+.cont3-sec1-total{
+float:left;
+position: relative;
+top:3px;
+width: 465px;	
+height: 20px;
+padding: .5em;
+font-size: 15px;	
+background-color:#eaeaeb;
+color: black;
+text-align: left;
+}
+PreImpreso .cont3-sec1-total{
+background-color: transparent;		
+}		
+.cont3-sec1-infofin{
+float: left;
+position: relative;
+left: 10px;
+top: 10px;
+}
+.cont3-sec2-text{
+float: left;
+position: relative;
+top: 20px;
+left: 10px;
+}
+.cont3-sec2-text2{
+float: left;
+position: relative;
+top: 20px;
+left: 50px;
+}
+#contenedor4{
+width: 500px;
+}
+.cont4-space1{
+width:500px ;
+height:110px;
+}
+.cont4-space2{
+width:500px ;
+height:245px;
+}
+.cont4-space3{
+width:500px ;
+height:170px;
+}
+.cont4-space4{
+width:500px ;
+height:120px;
+border-bottom-style: dashed;
+border-width: 1px;
+border-color: #B7B7B8;	
+}
+PreImpreso .cont4-space4{
+border-bottom-style:none;
+}	
+.cont4-space5{
+width:500px ;
+height:110px;
+background-color:#eaeaeb;
+}
+PreImpreso .cont4-space5{
+display:none;		
+}	
+.cont4-space1-1{
+float: left;
+position: relative;
+left: 10px;
+top:15px;
+width: 480px;	
+height:20px; 
+background-color:#eaeaeb;
+}
+.cont4-sec2-atencion{
+float: left;
+position: relative;
+left: 10px;
+width: 480px;
+height: 230px;	
+}
+.cont4-sec2-catencion{
+height: 230px;
+margin: 0 0 .8em 0;
+border-width: 2px;
+border-style: solid;		
+}
+.cont4-sec2-titloatencion{
+position: relative;
+height: 25px;
+display: block;
+padding: .5em 1em;
+font-weight: 550;
+}
+.cont4-sec2-txt{
+float: left;
+position: relative;
+width:360px;
+height:180px;
+top:10px;	
+left: 105px;
+line-height: 50%;
+text-align-last:left;
+}
+.cont4-tabla-consumo{
+width: 480px;
+float: left;
+position: relative;
+left: 10px;
+}
+.cont4-detalle-consumo{
+float: left;
+position: relative;
+width: 476px;
+height: 210px;
+border-right-style: solid;
+border-left-style: solid;
+border-width:2px;
+border-bottom-width: 1px;	
+border-color: #eaeaeb;	
+}
+.cont4-fin-consumo{
+float:left;
+position: relative;
+top:10px;	
+width: 476px;	
+height: 20px;
+font-size: 11px;
+background-color:#eaeaeb;
+color: black;
+}
+.cont4-sec3-grafico{
+float: left;
+position: relative;
+width: 270px;
+height: 110px;
+}
+.cont4-sec3-aviso{
+float: left;
+position: relative;
+top: 0px;
+left: 50px;	
+width: 150px;
+height: 135px;	
+}
+.cont4-sec4-recuadro1{
+float: left;
+position: relative;
+left: 15px;
+width: 235px;
+height: 110px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-right-style: dashed;
+border-width: 2px;
+border-right-width: 1px;
+border-color: black;
+border-right-color:#B7B7B8;
+border-radius: 2px;
+}
+.cont4-sec4-recuadro2{
+float: left;
+position: relative;
+left: 10px;
+width: 235px;
+height: 110px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-right-style: solid;
+border-width: 2px;
+border-radius: 2px;
+}
+.cont4-sec4-titulo1{
+float: left;
+width: 223px;	
+height: 13px;
+padding: .5em;
+font-size: 12px;	
+background-color:#060606;
+color: #fff;
+text-align: center;
+}
+.cont4-sec4-minigrafo{
+float: left;
+position: relative;
+width: 50px;
+height: 65px;	
+bottom: 15px;
+left: 10px;	
+}	
+.cont4-sec4-gtext{
+float: left;
+position:relative;	
+top:15px;
+left:20px;
+}
+/*Graficos*/
+.codbarra{
+position: relative;
+top: 10px;
+height: 50px;
+width: 320px;
+background-repeat:no-repeat;
+background-size: 100% 100%;
+}
+.timbre-electronico{
+position:relative;
+width:240px;
+height:90px;
+background-repeat: no-repeat;
+background-size: 240px 90px;
+}
+.logo{
+width:200px;
+height:80;
+background-repeat: no-repeat;
+background-size: 90% 100%;
+}
+PreImpreso .logo{
+display: none;		
+}	
+</style>
+</head>
+<table  border="0" cellpadding="20" cellspacing="0">
+  <tr>
+	<td style="padding:0px 5px 5px 5px;vertical-align:top;">
+		
+		<div id="contenedor1">
+		<div style="position: relative;width: 500px;height: 120px">
+			<div class="cont1-space1 txt-blanco">
+			<div style="position: relative;top: 10px;left: 10px;width:350px;height: 20px;">		
+			<p><font size="4">¿Problemas con el servicio de electricidad?</font></p>
+			</div >
+			<div style="float: left; position: relative;top: 15px;left:10px  ;line-height: 10%;font-size: 10px">
+			<p>Si tienes alguna consulta o reclamo  con</p>
+			<p>respecto al servicio, puedes contactarnos</p>
+			<p>a través de nuestros distintos canales.</p>
+			<div style="float:left; position: relative;top:15px"><p>www.sasipa.cl</p></div>
+			</div>
+			
+			<div class="cont1-numatencion"  style="line-height: 10%;font-size: 10px">
+			<p>Emergencias / Servicio al cliente</p>
+			<div class="img-telefono-blanco"></div>
+			<div style="float: left;position: relative;top:-3px"><p>&nbsp;&nbsp;32 2100 213</p></div>
+			<div class="img-telefono-blanco" style="position: relative;left: 5px"></div>
+			<div style="float:left;position: relative;top:-3px"><p>&nbsp;&nbsp;&nbsp;&nbsp;32 2100 212</p></div>
+			</div>
+			
+			<div class="img-sasipa"></div>
+		</div>
+		</div>
+		<div style="position: relative;width: 500px;height: 110px;bottom:10px">	
+		<div class="cont1-space2">
+		<div style="position: relative;top: 10px;left: 10px;width:375px;height: 20px;">		
+		<p><font size="4">¿Qué hago si mi problema no se ha resuelto?</font></p>	
+		</div >
+		<div style="float: left; position: relative;top: 20px;left:10px  ;line-height: 10%;font-size: 10px">
+			<p>Contácte con la Superintendencia de Electricidad y Combustibles (SEC), entidad que</p>
+			<p>vigila que las personas cuenten con un servicio seguro y de calidad en los sistemas de</p>
+			<p>electricidad y combustibles.</p>
+			<div style="float:right;">
+			<div class="img-telefono-negro"></div>
+			<div style="float: left;position: relative;top:-3px"><p><strong>&nbsp;&nbsp;2 2712 7000 </strong></p></div>
+			<div class="img-telefono-negro" style="position: relative;left: 5px"></div>
+			<div style="float:left;position: relative;top:-3px"><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;600 6000 732</strong></p></div>
+			<div style="float:left;position: relative;top:-3px"><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;www.sec.cl</strong></p></div>
+			</div>
+			</div>	
+			
+			<div class="img-sec"></div>
+		</div>
+		</div>
+		
+		<div style="position: relative;width: 500px;height: 170px;bottom:19px">		
+		<div class="cont1-space3">
+		<div style="position: relative;top: 10px;left: 10px;width:185px;height: 20px;">		
+		<p><font size="4">Datos de mi suministro</font></p>	
+		</div>
+		<div style="float: left; position: relative;top: 10px;left:10px;line-height:20%;font-size: 10px;width: 220px;height:140px">
+			
+			<p style="line-height: 100%"><strong>Fecha límite para cambio de tarifa:</strong> A opción del cliente</p>
+			<p><strong>Fecha Término de tarifa:</strong> Indefinida</p>
+			<p style="line-height: 100%"><strong>Dirección de Suministro:</strong> </p>
+			</div>
+			
+			<div class="cont1-sec3-timbre">
+			<div class="timbre-electronico" ></div>
+			<p class="txt-negro" style="position: relative;top 15px;font-size: 8px; line-height: 120%;width: 250px;text-align:center">Timbre Electrónico SII<br> Res.80 del 2014 Verifique documento: dte.asyntec.com/verifica</p>
+			</div>			
+			</div>	
+			</div>
+			
+			<div style="position: relative;width: 500px;height: 345px;">	
+			<div class="cont1-space4">
+			<div class="cont1-sec4-lugar">
+			<p style="border-bottom-style:solid; border-width: 1px;border-color:#eaeaeb;"><strong>LUGARES DE PAGO</strong></p>
+			<p><strong>Portales Web</strong></p>
+			<p>Banco Santander</p>
+			<p>Banco Estado</p>
+			</div>
+			<div class="cont1-sec4-oficina">
+			<p style="border-bottom-style:solid; border-width: 1px;border-color:#eaeaeb;"><strong>OFICINA COMERCIAL</strong></p>
+			<p>Hotu Matua S/N Rapa-Nui</p>
+			</div>
+			<div class="cont1-sec4-pac">
+			<p style="font-size: 12px"><strong>Pago Automático</strong></p>
+				<li><strong>PAC:</strong> Convenios con Bancos: Banco Estado y Banco Santander</li>
+				<li><strong>PAT:</strong> Tarjetas de créditos bancarias (Transbank)</li>
+			</div>
+			<div class="cont1-sec4-presencial">
+			<p style="font-size: 12px"><strong>Pago Presencial</strong></p>
+			</div>
+			</div>
+			</div>
+		</div>
+		
+	</td>
+	<td style="padding:10px 5px 5px 5px;vertical-align:top;">
+		
+		<div id="contenedor2">
+			<div class="cont2-space1">
+			<div id="cont2-logo">
+			<div style="width: 200px;height: 80px">
+				<div class="logo" ></div>
+			</div>
+			<div class="txt-negro" style="line-height: 50%">
+				<p><strong>SOCIEDAD AGRICOLA Y SERVICIOS ISLA DE PASCUA SpA</strong></p>
+				<p><strong>RUT:</strong> 11.111.111-1 / <strong>GIRO:</strong> AGRICOLA Y SERVICIOS DE </p>
+				<p>UTILIDAD PÚBLICA</p>
+				<p><strong>CASA MATRIZ:</strong> CALLE MATUA S/N, ISLA DE PASCUA</p>
+			</div>
+			</div>
+			<div id="cont2-doc" align="right">
+			<div class="cont2-cred" >
+			<div class="txt-rojo" align="center" style="line-height: 50%">
+				<p>R.U.T: 11111111-1</p>
+				<p>BOLETA ELECTRÓNICA</p>
+				<p>N° {{folio}}</p>
+			</div>
+			</div>
+			<div id="cont2-csii" class="txt-rojo">
+				<p>S.I.I. - VALPARISO</p>
+			</div>
+
+			<div class="cont2-ccliente2" align="center">
+				<p class="txt-negro" style="position: relative;bottom:5px; font-size: 10px"><strong></strong></p></div>	
+			<div class="cont2-ccliente1" align="center">
+				<p class="txt-blanco" style="position: relative;bottom:5px; font-size: 10px"><strong>N° CLIENTE</strong></p></div>
+			<div id="cont2-fechemi" align="center">
+			<p class="txt-negro" style="font-size: 10px"><strong>Fecha Emisión:</strong> </p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="cont2-space2" >
+			<div class="cont2-dcliente">
+				<p></p>
+				<p><strong>Dirección de envio:</strong> </p>
+				<p><strong>Dirección suministro:</strong> </p>
+				<p><strong>Ruta:</strong> </p>	
+			</div>
+			<div class="cont2-atencion">
+ 			<div class="cont2-catencion" style="background-color:#ffffff;border-color:#060606;border-radius:2px;">
+	 		<div class="cont2-titloatencion" style="background-color:#060606;color:#FFFFFF;text-align:left"><strong>Atención:</strong></div>
+	 		<div class="cont2-txt">
+				<p style="font-size: 11px"><strong>No se pudo tomar lectura</strong></p>
+				<p style="font-size: 12px">Contactanos al</p>
+				<p style="font-size: 13px"><strong>800-000-0000</strong></p>
+    		</div>
+						
+			</div>
+			<div class="img-tatencion"></div>	
+			</div>
+			
+			</div>
+			
+			<div class="cont2-space3">
+			<div class="cont2-sec3-text1 txt-negro" style="font-size:16px;">
+				<p>¿Cuánto debo?</p>
+			</div>
+			<div class="cont2-sec3-text2 txt-negro" style="font-size:15px">
+			<p style="float: left;width: 130px"><strong>Total a Pagar</strong></p>
+			<p style="float: right;width: 100px"><strong></strong></p>
+			<p style="float: left;position: relative;bottom:15px; font-size:9px;">Monto del Periodo: </p>
+			</div>
+			</div>
+			
+			<div class="cont2-space4">
+			<div class="cont2-sec4-1">
+			<p class="txt-blanco" style="float: right;position:relative;bottom:8px;right:20px;font-size: 10px">*Revise el detalle de tu cuenta al reverso de esta pagina</p>	
+			</div>
+			
+			<div class="cont2-sec4-2">
+			<div class="txt-blanco" style="float: left; position: relative; left: 15px ;font-size: 14px;line-height: 50%">
+			<p><strong>¿Hasta cuando</strong></p>
+			<p><strong>puedo pagar?</strong></p>
+			</div>
+			<div class="cont2-sec4-3" style="border-radius: 2px">
+			</div>
+			</div>
+			
+			<div class="cont2-sec4-4">
+			<div class="cont2-sec4-5" style="border-radius: 2px">
+			    <div style="position: relative;left: 10px;width: 295px">
+				  <p style="float: left; font-size: 11px"><strong>Fecha de Vencimiento</strong></p>
+				  <p style="float: right;position: relative;right: 10px;font-size: 11px"><strong></strong></p>
+				  <p style="float: left;position: relative;bottom: 5px"><em>(A partir de esta fecha se originarán intereses y se te cobrará <br>un cargo adicional por pago fuera del plazo)</em></p>
+				</div>
+			</div>
+			<div class="cont2-sec4-6" style="border-radius: 2px">
+			<div style="position: relative;left: 10px;width: 295px">
+				  <p style="float: left; font-size: 11px"><strong> </strong></p>
+				  <p style="float: right;position: relative;right: 10px;font-size: 11px"><strong></strong></p>
+				</div>	
+			</div>
+			</div>
+			</div>
+			
+			<div class="cont2-space5">
+			<div class="cont2-sec5-1" style="font-size: 15px">
+			<p><strong>Cupón <br>de pago</strong></p>
+			</div>
+			
+			<div class="cont2-sec5-fin2">
+			<div class="cont2-sec5-ini txt-negro" style="font-size: 10px">
+			<p style="float: left"><strong>N° Cliente</strong></p>
+			<p style="float: left;position: relative;left: 140px"><strong>Fecha de Vencimiento</strong></p>
+			</div>
+			<div class="cont2-sec5-fin3 txt-negro"><p style="position: relative;bottom: 5px;font-size: 15px"><strong></strong></p></div>
+			<div class="cont2-sec5-fin4 txt-negro"><p style="position: relative;bottom: 5px;font-size: 15px"><strong></strong></p></div>
+			<div class="cont2-sec5-fin5 txt-negro">
+			<p style="float: left;position: relative;left: 10px;top: 0px;width: 250px; font-size: 15px"><strong>Total a pagar</strong></p>
+			<p style="float: right;position: relative;right: 10px;font-size: 15px"><strong></strong></p>
+			</div>
+			<div class="cont2-sec5-codbarra" align="center">
+			<div class="codbarra"></div>
+			</div>
+			</div>
+			
+			<div class="cont2-sec5-fin6 txt-negro" style="font-size:10px">
+			
+			<p><strong></strong>   <strong></strong></p>
+			
+			</div>
+
+
+			</div>
+			
+		</div>
+    </td>	
+  </tr>
+</table>
+
+<div style="page-break-before: always"></div>
+<br>
+<table border="0" cellpadding="20" cellspacing="0">
+<tr>
+<td style="padding:0px 5px 5px 5px;vertical-align:top;">
+<div id="contenedor3">
+	<div class="cont3-space1">
+	<div style="float: left; position: relative;top: 10px;left: 10px;width:480px;height: 30px;">		
+		<p><font size="4">Detalle de mi cuenta</font></p>
+	</div>
+
+	
+	<div class="cont3-sec1-detalle">
+	<div style="float: left;position: relative;left: 5px;width: 300px;height: 350px;text-align:left">
+		
+		<p>
+		
+		</p>
+		
+	</div>	
+	<div style="float: left;position: relative;left: 20px;width: 150px;height: 350px;text-align:right">
+		
+		<p>
+		
+		</p>
+	
+	</div>
+	</div>
+	
+	<div class="cont3-sec1-detalle2" >
+	<div style="float: left;position: relative;left: 5px; width: 230px;height: 70px;line-height: 60%">
+		
+		
+	</div>
+	<div style="float: left; width: 240px;height: 70px;line-height: 60%;text-align: right">
+		<p></p>
+		<p></p>
+		</p>
+	</div>		
+	<div class="cont3-sec1-total">
+	<p style="float: left; position: relative; bottom: 13px"><strong>Total a Pagar</strong></p>
+	<p style="float: right; position: relative; bottom: 13px;text-align: right"><strong></strong></p>
+	</div>
+	</div>
+	
+	<div class="cont3-sec1-infofin">
+	<p>*No pagar estos cargos facultará a la empresa a <br>iniciar acciones de cobranza</p>
+	</div>
+	</div>
+	
+	<div style="position: relative;top: 10px; width: 500px;height: 145px">
+	<div class="cont3-space2">
+	<div style="float: left; position: relative;top: 0px;left: 10px;width:480px;height: 30px;">		
+		<p><font size="4">¿Qué Significa lo que estoy pagando?</font></p>
+	</div>
+	<div class="cont3-sec2-text">
+		<p><strong>Transporte de la Electricidad:</strong><br>
+		   Monto que se paga por el uso de las torres <br>
+		   y subestaciones que llevan la electricidad <br>
+		   desde donde se produce hasta las afueras <br>
+		   de la ciudad y que depende de la cantidad <br>
+		   de electricidad consumida.</p>
+	</div>	
+	<div class="cont3-sec2-text2">
+		<p>Ajuste para facilitar el pago en efectivo, <br>
+		   mes anterior: Monto cobrado en la cuenta <br>
+		   actual y que fue descontado el mes anterior <br>
+		   para evitar pagar o recibir vuelto con monedas <br>
+		   de $1 ó $5.</p>
+	</div>	
+	</div>
+	</div>
+	</div>
+</td>
+
+<td style="padding:10px 5px 5px 5px;vertical-align:top;">
+<div id="contenedor4">
+	<div class="cont4-space1">
+	<div style="float: left; position: relative;top: 0px;left: 10px;width:240px;height: 30px;">		
+		<p><font size="4">Mi consumo en el mes actual</font></p>
+	</div>
+	<div style="float: left; position: relative;top: 10px;left:10px  ;line-height: 10%;font-size: 12px; width: 490px">
+			<p><em>Para determinar cuánta electricidad consumiste en el mes, se considera lo que marca</em></p>
+			<p><em>tu medidor en la "lectura actual" y se le resta lo que marcó en tu "lectura anterior"</em></p>
+	</div>
+	<div class="cont4-space1-1">
+	<p style="float: left; position: relative; bottom: 5px;left: 5px"><strong>Período de lectura:</strong> </p>
+	<p style="float: left; position: relative; bottom: 5px;left: 50px"><strong>Fecha estimada próxima lectura:</strong> </p>
+	</div>
+	</div>
+	
+	<!--<div class="cont4-space2">
+	<div class="cont4-sec2-atencion">
+ 			<div class="cont4-sec2-catencion" style="background-color:#ffffff;border-color:#060606;border-radius:2px;">
+	 		<div class="cont4-sec2-titloatencion" style="background-color:#060606;color:#FFFFFF;text-align:right; font-size: 12px"><p style="position: relative;bottom:5px;right: 15px"><strong>Atención:</strong> Facturación Estimada por no toma de Lectura</p></div>
+	 		<div class="cont4-sec2-txt" style="font-size: 10px">
+				<p>Lamentablemente, este mes no fue posible tomar la lectura de su</p>
+				<p>medidor, por lo que hemos realizado una facturación estimada de su</p>
+				<p>consumo. Este cobro se realiza utilizando el promedio de sus consumos</p>
+				<p>de los ultimos 6 meses, tal como lo establece la normativa vigente.</p>
+    			<br>
+				<p>En la proxima facturación, una vez que podamos tomar la lectura del</p>
+				<p>medidor, se realizarán los ajustes necesarios sobre el cobro realizado.</p>
+				<br>
+				<p>Si tiene cualquier duda o requiere de más información, le invitamos a</p>
+				<p>contactarnos, teniendo sunúmero de cliente a la mano, al 800 800 767</p>
+				<p>o en nuestro sitio web www.sasipa.cl</p>
+			</div>
+						
+			</div>
+			<div class="img-tatencion" style="float: left;position: relative;left: 20px;bottom:230px;width: 70px; height: 100px"></div>	
+			</div>
+	</div>-->
+	<div class="cont4-space2">
+		<div class="cont4-tabla-consumo">
+		<table  border="0" cellpadding="4" cellspacing="0" style="width: 480px">
+			<tr style="background-color: black; color: white">
+			<th scope="col" style="width: 96px">medidor</th>
+			<th scope="col" style="width: 96px">Propiedad</th>
+			<th scope="col" style="width: 190px">Lecturas (kWh)</th>
+			<th scope="col" style="width: 48px">Constante</th>
+			<th scope="col" style="width: 130px">Consumo medidor</th>	
+			</tr>
+		</table>
+		<div class="cont4-detalle-consumo" style="text-align: center">
+			<div style="float: left;position: relative;left: 5px;width: 70px;height: 180px">
+			<p></p>
+			</div>
+			<div style="float: left;position: relative;left: 20px;width: 70px;height: 180px">
+			<p></p>
+			</div>
+			<div style="float: left;position: relative;left: 35px;width: 130px;height: 180px">
+				<div style="float: left; width: 130px;height: 20px">
+				
+				</div>
+				<div style="float: left;position: relative;bottom: 10px;width: 130px;height: 20px">
+			
+				<p style="float: right;position: relative;font-size: 10px"></p>
+				
+				</div>
+			</div>
+			<div style="float: left;position: relative;left: 50px;width: 50px;height: 180px">
+			
+			<p></p>
+			
+			</div>
+			<div style="float: left;position: relative;left: 70px;width: 80px;height: 180px">
+				
+			<p></p>
+			
+			</div>
+			<div class="cont4-fin-consumo">
+			
+			<p style="float: left; position: relative; bottom: 8px;left:220px"><strong>Consumo total del mes: </strong></p>
+			<p style="float: right; position: relative; bottom: 8px;right: 30px"><strong></strong></p>
+			
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<div class="cont4-space3">
+		<div style="float: left; position: relative;top: 0px;left: 10px;width:480px;height: 30px;">		
+			<p><font size="4">¿Cuál fue mi consumo en los últimos 13 meses?</font></p>
+		</div>
+		<div style="float: left; position: relative;top:15px;left: 20px; width: 270px;height: 110px">
+		<div class="cont4-sec3-grafico">
+		
+		
+		
+		</div>
+		</div>	
+		<div class="cont4-sec3-aviso">
+			<p><strong>Tu límite de invierno es: <br></strong></p>
+		
+		<div style="border-style: solid;border-width: 1px;border-radius: 3px;">
+			<p style="position: relative; left: 8px"><em>Si tu consumo mensual <br>sobrepasa los 430kWh, la <br>energía que consumas por <br>sobre tu límite de invierno <br>se cobrará a un precio mayor.</em></p>
+		</div>	
+		</div>
+	</div>
+	
+	<div class="cont4-space4">
+		<div class="cont4-sec4-recuadro1">
+			<div class="cont4-sec4-titulo1">
+			<p style="position: relative; bottom: 13px"><strong>Mismo mes del año pasado</strong></p>
+			</div>
+			<div class="cont4-sec4-minigrafo">
+				
+		     
+			</div>
+			<div class="cont4-sec4-gtext"><p></p></div>
+		</div>
+		<div class="cont4-sec4-recuadro2">
+			<div class="cont4-sec4-titulo1">
+			<p style="position: relative; bottom: 13px"><strong>Mes pasado</strong></p>
+			</div>
+			<div class="cont4-sec4-minigrafo">
+				
+				
+			</div>
+			<div class="cont4-sec4-gtext"><p></p></div>
+		</div>
+	</div>
+	
+	<div style="width: 500px;height: 110px">
+	<div class="cont4-space5">
+			<div class="img-lavadora"></div>
+			<div style="float: left;position: relative; left: 40px; top:10px; color:#717171; line-height: 100%">
+			<p><strong>Lavadora</strong></p>	
+			<p>Utilice su lavadora siempre con <br>carga completa y de preferencia <br>
+				con agua fría. Cuando seque la <br> ropa, prefiera hacerlo al sol y no <br> en la secadora</p>
+			</div>
+			<div class="img-refrigerador"></div>
+			<div style="float: left;position: relative; left: 60px;top:10px; color:#717171; line-height: 100%">
+			<p><strong>Refrigeración</strong></p>	
+			<p>No introduzcas alimentos <br> calientes en en tu refrigerador. <br> Asi evitarás que tu
+				refrigerador <br> electricidad adicional.</p>
+			</div>
+		</div>
+	</div>		
+	</div>
+</td>
+</tr>
+</table>
+
+</html>

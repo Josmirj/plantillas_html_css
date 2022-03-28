@@ -1,0 +1,658 @@
+<html>
+<head>
+<style>
+@page { 
+size: letter portrait;
+margin:0;
+}
+table {
+font-family: Helvetica, sans-serif;
+font-size: 10px!important;
+margin:0px auto;
+}
+body {
+margin:0px;
+}	
+:root {
+
+/* Colors: */
+--rojo: #FA3636;
+--negro: #060606;
+--amarillo: #FFF04F;
+--azul: #006DB2;
+--blanco: #FFFFFF;
+}
+.txt-rojo{
+color: var(--rojo);	
+}
+.txt-blanco{
+color: var(--blanco);	
+}
+.txt-negro{
+color: var(--negro);	
+}
+#contenedor-Principal{
+width:750px;
+}
+#contenedorPrincipal2{
+width:750px;
+}
+.seccion-1{
+width: 750px;
+height: 90px;
+margin-top: -5px;	
+}
+.seccion-1-datosservicio{
+float: left;	
+width: 750px;
+height: 60px;
+}
+.seccion1-logos{
+float: left;	
+width: 290px;
+height: 85px;
+}
+.seccion1-cuadros{
+float: left;	
+width: 450px;
+height: 85px;
+}
+.seccion1-descripcion{
+float: left;
+position:relative;
+left: 5px;	
+width: 220px;
+height: 85px;
+font-family: Helvetica, "sans-serif";
+font-size:12px;	
+}
+.seccion1-crojo{
+float: right;
+width: 225px;
+height: 85px;
+border: 2px solid #F90404;
+color: var (--rojo);
+font-family: Helvetica, "sans-serif";
+}
+.cont2-ccliente1{
+float: right;
+position: relative;
+bottom: 13px;
+width: 177px;
+height: 22px;
+background-color: #2670B7;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont2-ccliente1{
+background-color:transparent;
+border:2px solid transparent;	
+}	
+.cont2-ccliente2 {
+float: right;
+position: relative;
+bottom: 13px;
+width: 215px;
+height: 22px;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont2-ccliente2{
+border:2px solid transparent;
+}
+.cont2-totalpago1 {
+width: 144px;
+height: 22px;
+background-color: #2670B7;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont2-totalpago1{
+background-color:transparent;
+border:2px solid transparent;	
+}	
+.cont2-totalpago2 {
+float: right;
+position: relative;
+left: 3px;	
+width: 250px;
+height: 22px;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont2-totalpago2{
+border:2px solid transparent;
+}
+.cont2-vencimiento1{
+position: relative;
+top: 5px;
+width: 144px;
+height: 22px;
+background-color: #2670B7;
+border: 2px solid #2670B7;
+}
+.cont2-vencimiento2{
+float: right;
+position: relative;
+left: 3px;	
+top: 5px;
+width: 250px;
+height: 22px;
+border: 2px solid #2670B7;
+}		
+.seccion-2{
+float: left;	
+width: 750px;
+height: auto;
+}
+.seccion2-column1{
+float: left;
+margin-top: 5px;
+margin-left: 5px;
+position: relative;
+left: 12px;	
+width: 310px;
+height: 510px;
+}
+.seccion2-contenido{
+width: 310px;
+height: 253px;	
+border: 2px solid #2670B7;
+}
+preImpeso .seccion2-contenido{
+background-color:transparent;
+border-color:transparent;
+}
+.seccion2-col1-titulo {
+padding: .5em 1em;
+font-weight: 530;
+font-size: 11px;
+text-align:left;
+background-color:#2670B7;
+color:#ffffff;
+}
+preImpreso .seccion2-col1-titulo{
+background-color:transparent;
+}
+.seccion2-graficonsumo{
+position: relative;
+top: 5px;
+width: 310px;
+height: 110px;	
+background-color:#ffffff;
+border:2px solid #2670B7;
+}	
+.seccion2-timbre{
+position: relative;
+top: 10px;
+width: 310px;
+height: 110px;	
+background-color:#ffffff;
+border:2px solid #2670B7;
+}
+.seccion2-col1-cont2-timbre{
+width: 310px;
+height: 100px;
+}	
+.seccion2-column2{
+float: left;
+margin-top: 5px;
+position: relative;
+left: 25px;	
+width: 398px;
+height: 510px;
+}
+.seccion2-col2-cont2{
+width: 395px;
+height: 253px;	
+border: 2px solid #2670B7;
+}
+.seccion2-col2-cont2-titulo {
+padding: .5em 1em;
+font-weight: 530;
+font-size: 11px;
+text-align:left;
+background-color:#2670B7;
+color:#FFFFFF;
+}
+.seccion2-col2-cont2-cuerpo {
+position: relative;
+width: 395px;
+height: 200px;
+color: black;
+}
+.seccion2-msjimportantes{
+position: relative;
+top:7px;	
+width: 395px;
+height: 167px;	
+border:2px solid #2670B7;
+}
+.seccion2-msjimportantes-titulo{
+padding: .5em 1em;
+font-weight: 530;
+font-size: 11px;
+text-align:left;
+background-color:#2670B7;
+color:#FFFFFF;
+}
+.seccion2-msjimportantes-cuerpo{
+position: relative;
+width: 395px;
+height: 190px;
+color: black;
+}	
+.seccion2-column3{
+float: left;
+position: relative;
+bottom: 8px;	
+left: 5px;	
+width: 733px;
+height: 55px;
+}	
+.cont3-titulos{
+float: right;
+color: white;
+width: 720px;
+height: 22px;
+background-color: #2670B7;
+}
+.cont3-relleno{
+float: right;
+position: relative;
+width: 716px;
+height: 27px;
+font-size: 12px;	
+border: 2px solid #2670B7;
+}
+.seccion2-column4{
+float: left;
+position: relative;
+top: 4px;	
+left: 7px;	
+width: 730px;
+height: 65px;
+}
+.cont4-datopenultimo1{
+float: right;
+position: relative;
+width: 135px;
+height: 22px;
+background-color: #2670B7;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont4-datopenultimo1{
+background-color:transparent;
+border:2px solid transparent;	
+}	
+.cont4-datopenultimo2{
+float: right;
+position: relative;
+width: 190px;
+height: 22px;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont4-datopenultimo2{
+border:2px solid transparent;
+}
+.cont4-datopenultimo3{
+float: right;
+position: relative;
+top: 5px;
+width: 135px;
+height: 22px;
+background-color: #2670B7;
+border: 2px solid #2670B7;
+}
+.cont4-datopenultimo4{
+float: right;
+position: relative;
+top: 5px;
+width: 190px;
+height: 22px;
+border: 2px solid #2670B7;
+}	
+.cont4-datofinales1{
+float: right;
+position: relative;
+width: 125px;
+height: 22px;
+background-color: #2670B7;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont4-datofinales1{
+background-color:transparent;
+border:2px solid transparent;	
+}	
+.cont4-datofinales2{
+float: right;
+position: relative;
+width: 160px;
+height: 22px;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont4-datofinales2{
+border:2px solid transparent;
+}
+.cont4-datofinales3{
+float: right;
+position: relative;
+top: 5px;
+width: 125px;
+height: 22px;
+background-color: #2670B7;
+border: 2px solid #2670B7;
+}
+.cont4-datofinales4{
+float: right;
+position: relative;
+top: 5px;
+width: 160px;
+height: 22px;
+border: 2px solid #2670B7;
+}
+.cont4-datospago1{
+float: right;
+position: relative;
+width: 125px;
+height: 22px;
+background-color: #2670B7;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont4-datospago1{
+background-color:transparent;
+border:2px solid transparent;	
+}	
+.cont4-datospago2{
+float: right;
+position: relative;
+width: 250px;
+height: 22px;
+border: 2px solid #2670B7;
+}
+PreImpreso .cont4-datospago2{
+border:2px solid transparent;
+}	
+.seccion2-column5{
+float: left;
+position: relative;
+top:2px;	
+width: 730px;
+height: 60px;
+}
+.page-break{
+}	
+preImpreso .page-break{
+display: none;	
+}		
+.retiro-column1{
+float: left;
+margin-top: 10px;
+margin-left: 5px;
+position: relative;
+left: 10px;	
+width: 340px;
+height: 390px;
+}
+.retiro-centropagos{
+width: 340px;
+height: 220px;	
+border: 2px solid #2670B7;
+}
+.retiro-centro-pagos-titulo {
+padding: .5em 1em;
+font-weight: 530;
+font-size: 11px;
+text-align:left;
+background-color:#2670B7;
+color:#ffffff;
+}
+.retiro-pagocheque{
+margin-top: 10px;
+width: 340px;
+height: 150px;	
+border: 2px solid #2670B7;
+}
+.retiro-pagocheque-titulo{
+padding: .5em 1em;
+font-weight: 530;
+font-size: 11px;
+text-align:left;
+background-color:#2670B7;
+color:#ffffff;
+}
+.retiro-column2{
+float: left;
+margin-top: 10px;
+margin-left: 20px;	
+position: relative;
+left: 25px;	
+width: 340px;
+height: 385px;
+}
+.retiro-contacto1{
+width: 340px;
+height: 150px;	
+border: 2px solid #2670B7;
+}
+.retiro-contacto2{
+margin-top: 10px;	
+width: 340px;
+height: 220px;	
+border: 2px solid #2670B7;
+}	
+/*Graficos*/
+.codbarra{
+height: 30px;
+width: 235px;
+background-repeat: no-repeat;	
+background-size: 70% 100%;
+}
+.timbre-electronico{
+position:relative;
+width:300px;
+height:90px;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+</style>
+</head>
+<table  border="0" cellpadding="20" cellspacing="0">
+	<tr>
+	<td>
+	<div id="contenedor-Principal">
+		<div class="seccion-1">
+		<div class="seccion1-logos">
+		<img width="240" src="{{logo}}" alt="" style="position: relative;left:20px"></img>
+		</div>
+		<div class="seccion1-cuadros">
+			<div class="seccion1-descripcion">
+			<div style="float: left;position: relative; bottom:12px; width: 220px;height: 85px;color:#2670B7">
+			<p><strong>Aguas pirque S.A. <br> R.U.T.: 99.524.670-8</strong></p> 
+			<p style="font-size: 11px;position: relative;bottom: 10px">Grio: Captación, Purificación y Disribución <br>de Agua Potable<br>Ramón Subercaseaux N°2503, Pirque.</p>
+			</div>	
+			</div>
+			<div class="seccion1-crojo" align="center">
+			<div class="txt-rojo" style="position: relative;width: 200px;height: 85px; text-align:center;font-size: 15px;">
+			<div style="float: left; position: relative; bottom: 10px; width:200px;height: 15px">
+			<p><strong>R.U.T.: 99.524.670-8</strong></p>
+			</div>
+			<div style="float: left; position: relative;bottom: 5px; width:200px;height: 15px">
+			<p><strong>NOTA DÉBITO ELECTRÓNICA</strong></p>
+			</div>
+			<div style="float: left; position: relative;top:18px; width:200px;height: 15px">	
+			<p><strong>N° {{folio}}</strong></p>
+			</div>
+			</div>
+			</div>
+		</div>
+		</div>
+		<div class="seccion-1-datosservicio">
+		  <div style="float: left;position: relative;left: 20px; width: 305px;height: 60px;font-size:10px;">
+			<div style="position: relative; botom: 5px; width: 305px; height: 60px">
+			<p style="float: left; width: 375px;position: relative;bottom: 5px;"><strong>Nombre: {{nombre_cliente}}</strong></p>
+			<p style="float: left;position: relative;bottom: 25px;width: 305px;">{{#if rut_completo}}<strong>Rut: {{rut_completo}}</strong>{{/if}}</p>
+			<p style="float: left;position: relative;bottom: 45px;width: 305px;">{{#if giro}}<strong>Giro: {{giro}}</strong>{{/if}}</p>	
+			<p style="float: left;position: relative;bottom: 65px;width: 305px;"><strong>Dirección: {{dir_completa_cliente}}</strong></p>
+			<p style="float: left;position: relative;bottom: 85px;width: 305px;">{{#if dir_despacho}}<strong>Dirección de Despacho: {{dir_despacho}}</strong>{{/if}}</p>
+			</div>	
+		  </div>	
+		  <div style="float: left;position: relative;left: 25px; width: 410px;height: 60px;">
+		  <div class="txt-rojo" style="width: 150px; position: relative;left: 230px;bottom: 10px; font-size:11px;">
+		<p>S.I.I - UNIDAD LA FLORIDA</p>
+		  </div>					  				   
+		  <div class="cont2-ccliente2" align="center">
+		  	<p class="txt-negro" style="position: relative;bottom:8px; font-size: 12px"><strong>{{id_servicio_completo}}</strong></p>
+		  </div>	
+		  <div class="cont2-ccliente1" align="center">
+			<p class="txt-blanco" style="position: relative;left: 10px; bottom:8px;text-align: left; font-size: 12px"><strong>Número de Cliente</strong></p>
+		  </div>
+		</div>	  
+		</div>
+		<div class="seccion-2">
+			<div class="seccion2-column1">
+			<div class="seccion2-contenido">
+	 		<div class="seccion2-col1-titulo"><strong>DETALLE DEL CONSUMO</strong></div>
+				
+			</div>
+			<div class="seccion2-graficonsumo" align="center">
+				
+			</div>	
+				<div class="seccion2-timbre" align="center">
+				<div class="seccion2-col1-cont2-timbre">
+				<div class="timbre-electronico" style="background-image: url({{CodBarras 1024 timbre}})"></div>
+				<p class="txt-negro" style="position: relative;bottom: 8px; font-size: 8px; line-height: 120%;width: 270px;text-align:center">Timbre Electrónico SII<br> Res.80 del 2014 Verifique documento: dte.asyntec.com/verifica</p>	
+				</div>	
+				</div>	
+				</div>
+				<div class="seccion2-column2">
+				<div class="seccion2-col2-cont2">
+	 			<div class="seccion2-col2-cont2-titulo"><strong>DETALLE DE CUENTA</strong></div>
+	 			<div class="seccion2-col2-cont2-cuerpo">
+				<div style="float: left;position: relative;top: 5px;left: 10px;width: 200px;height: 140px;text-align:left;line-height: 60%">
+				{{# each detalle}}
+ 				<p>{{nom_grupo_doc}}{{#if nom_corto_unidad}}
+				{{#if sum_unidades}} 
+				{{#Regex.IsMatch nom_corto_unidad "C/U" "i"}} 
+				{{else}} 
+				({{String.Format ../sum_unidades "N0"}} {{../nom_corto_unidad}}) 
+				{{/Regex.IsMatch}} 
+				{{/if}}
+				{{/if}}
+				</p>
+				{{/each}}
+				</div>	
+				<div style="float: left;position: relative;top: 5px;left: 15px;width: 170px;height: 140px;text-align:right;line-height: 60%">
+				{{# each detalle}}
+				<p>
+				{{#if monto_signo}}
+				${{Format monto_signo "N0" "es-CL"}}
+				{{/if}}
+				</p>
+				{{/each}}
+				</div>
+				
+		<div style="float: left;position: relative;left: 10px; width: 395px;height: 15px;font-size: 11px">
+		  <p style="float: left;width: 100px"><strong>Total Venta Mes</strong></p>
+		  <p style="float: right;position: relative; right: 20px; text-align: right;"><strong>${{Format monto_neto "N0" "es-CL"}}</strong></p>
+		</div>
+		<div style="float: left;position: relative;left: 10px;width: 395px;height: 15px;font-size: 11px">
+		  <p style="float: left;width: 100px"><strong>Iva</strong></p>
+		  <p style="float: right;position: relative;right: 20px; text-align: right"><strong>${{Format iva "N0" "es-CL"}}</strong></p>
+		</div>
+		<div style="float: left;position: relative;left: 10px; width: 395px;height: 15px;font-size: 11px">
+		  <p style="float: left;width: 100px"><strong>Total a Pagar</strong></p>
+		  <p style="float: right;position: relative;right: 20; text-align: right;"><strong>${{Format total_pagar "N0" "es-CL"}}</strong></p>
+		</div>
+		</div>
+		</div>
+		<div style="width: 395px;height: 60px;position: relative;top: 5px;">
+		<div class="cont2-totalpago2" align="center" >
+		  	<p class="txt-negro" style="position: relative;bottom:8px; font-size: 12px"><strong>${{Format total_pagar "N0" "es-CL"}}</strong></p>
+		  </div>	
+		  <div class="cont2-totalpago1" align="center">
+			<p class="txt-blanco" style="position: relative;bottom:6px; font-size: 11px"><strong>TOTAL A PAGAR</strong></p>
+		  </div>
+		  <div class="cont2-vencimiento2" align="center">
+		  	<p class="txt-negro" style="position: relative;bottom:8px; font-size: 12px"><strong>{{Format fecha_vcto "dd/MM/yyyy"}}</strong></p>
+		  </div>	
+		  <div class="cont2-vencimiento1" align="center">
+			<p class="txt-blanco" style="position: relative;bottom:6px; font-size: 11px"><strong>VENCIMIENTO</strong></p>
+		  </div>			
+		</div>			
+		<div class="seccion2-msjimportantes">
+	 	<div class="seccion2-msjimportantes-titulo"><strong>AGUAS PIRQUE INFORMA</strong></div>
+	 	<div style="position: relative; width:395px;height: 140px">
+		<p style="position: relative;left: 5px;width: 390px;height: 15px;text-align: left"><strong>DOCUMENTOS REFERENCIADOS</strong></p>
+		{{#each referencia}}
+		<p style="position: relative;width: 390px;left: 5px;height: 15px;text-align: left"><strong>TIPO DOCUMENTO:</strong> {{tipo_documento_referencia}}</p>
+		<p style="position: relative;width: 390px;left: 5px;bottom:10px;height: 15px;text-align: left"><strong>FOLIO:</strong> {{no_doc_ref}} <strong>FECHA:</strong> {{Format fec_doc_ref "dd/MM/yyyy"}}</p>		
+		<p style="position: relative;width: 390px;left: 5px;bottom:20px;height: 15px;text-align: left"><strong>RAZÓN REFERENCIA:</strong> {{razon_ref}}</p>
+		<p style="position: relative;width: 390px;left: 5px;bottom:30px;height: 15px;text-align: left">{{#if observaciones}}<strong>MOTIVO:</strong> {{observaciones}}{{/if}}</p>
+		<p style="position: relative;width: 390px;left: 5px;bottom:35px;height: 15px;text-align: left"><strong>{{correccion_glosa}}</strong></p>
+		{{/each}}
+		</div>
+		</div>			
+		</div>
+		<div class="seccion2-column3">
+		<div class="cont3-titulos" style="font-size: 11px">
+		<div style="float: left;width: 144px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px">Medidor</p></strong></div>
+		<div style="float: left;width: 144px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px">Grupo Tarifario</p></strong></div>
+		<div style="float: left;width: 144px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px">Diámetro</p></strong></div>
+		<div style="float: left;width: 144px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px">Fecha de Emisión</p></strong></div>
+		<div style="float: left;width: 144px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px">Fecha de Vencimiento</p></strong></div>
+		</div>
+		<div class="cont3-relleno" align="center">
+		<div style="float: left;width: 143px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px"></p></strong></div>
+		<div style="float: left;width: 143px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px"></p></strong></div>
+		<div style="float: left;width: 143px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px"></p></strong></div>
+		<div style="float: left;width: 143px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px">{{Format fecha_fact "dd/MM/yyyy"}}</p></strong></div>
+		<div style="float: left;width: 143px;height: 25px;text-align: center"><strong><p style="position: relative;bottom: 4px">{{Format fecha_vcto "dd/MM/yyyy"}}</p></strong></div>	
+		</div>		
+		</div>
+		<div class="seccion2-column4">
+		<div style="float: left;position: relative;left: 90px; width: 340px;height: 60px;">
+		<div class="cont4-datopenultimo2" align="center" >
+		  	<p class="txt-negro" style="position: relative;bottom:5px; font-size: 12px"><strong>{{id_servicio_completo}}</strong></p>
+		  </div>	
+		  <div class="cont4-datopenultimo1">
+			<p class="txt-blanco" style="position: relative;left:5px;bottom:5px; font-size: 11px"><strong>Número de Cliente</strong></p>
+		  </div>
+		  <div class="cont4-datopenultimo4" align="center">
+		  	<p class="txt-negro" style="position: relative;bottom:5px; font-size: 12px"><strong>{{folio}}</strong></p>
+		  </div>	
+		  <div class="cont4-datopenultimo3">
+			<p class="txt-blanco" style="position: relative;left:5px;bottom:5px; font-size: 11px"><strong>Nota Débito Electrónica</strong></p>
+		  </div>			
+		</div>
+		<div style="float: right; width: 365px;height: 60px;">
+		<div class="cont4-datofinales2" align="center" >
+		  	<p class="txt-negro" style="position: relative;bottom:5px; font-size: 12px"><strong>{{Format fecha_fact "dd/MM/yyyy"}}</strong></p>
+		  </div>	
+		  <div class="cont4-datofinales1">
+			<p class="txt-blanco" style="position: relative;left:5px;bottom:5px; font-size: 11px"><strong>Fecha de Emisión</strong></p>
+		  </div>
+		  <div class="cont4-datofinales4" align="center">
+		  	<p class="txt-negro" style="position: relative;bottom:5px; font-size: 12px"><strong>{{Format fecha_vcto "dd/MM/yyyy"}}</strong></p>
+		  </div>	
+		  <div class="cont4-datofinales3">
+			<p class="txt-blanco" style="position: relative;left:5px;bottom:5px; font-size: 11px"><strong>Fecha de Vencimiento</strong></p>
+		  </div>			
+		</div>	
+		</div>			
+		<div class="seccion2-column5">
+		<div style="float: left; position: relative;left: 100px; width: 235px;height: 30px;">
+		<div style="float: left; position: relative;left:30px;width:235px ;height: 30px;" align="center">
+			<div class="codbarra" style="background-image: url({{CodBarras 16 (Format id_empresa "00")(Format cod_tipo_doc "000")(Format no_doc "00000000")(Format id_servicio "000000000")(Format 0 "00000000")(Format total_pagar "00000000")}});"align="center"></div>
+		</div>
+		</div>
+		<div style="float: right;position: relative;left: 7px; width: 400px;height: 30px;">
+		<div class="cont4-datospago2" align="center">
+		  	<p class="txt-negro" style="position: relative;bottom:9px; font-size: 14px"><strong>${{Format total_pagar "N0" "es-CL"}}</strong></p>
+		</div>	
+		<div class="cont4-datospago1">
+			<p class="txt-blanco" style="position: relative;left: 5px; bottom:7px; font-size: 12px"><strong>Total a Pagar</strong></p>
+		</div>
+		</div>	
+		</div>
+		</div>
+	</td>
+	</tr>
+</table>
+</html>
