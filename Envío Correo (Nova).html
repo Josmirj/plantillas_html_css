@@ -1,0 +1,119 @@
+<p>&nbsp;</p>
+<table width="600px" cellspacing="0" cellpadding="1" align="center" bgcolor="#e0edf6">
+  <tbody>
+    <tr>
+      <td style="text-align: left; font-size: 10px; font-family: verdana;">
+        <img style="display: block; width: 100%;" src="https://novaguas.cl/wp-content/uploads/2020/03/imagen-email.jpg" alt="" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="borde" style="width: 600px;" cellspacing="0" cellpadding="1" align="center" bgcolor="#e0edf6">
+  <tbody>
+    <tr>
+      <td style="width: 10px;">&nbsp;</td>
+      <td style="text-align: left; font-family: verdana; width: 571px;">
+        <h3>{{#if nom_completo}}
+          <br />Estimado Sr(a) {{nom_completo}}{{else}}<br />Estimado Sr(a) Cliente {{/if}},
+        </h3>
+        <p>Junto con saludarlo (a), <strong>NOVAGUAS,</strong> le envía
+        los siguientes documentos:
+			
+        <table  border="0" cellpadding="4" cellspacing="0" style="width: 575px; border: 1px solid transparent;">
+			<tr  style="background-color: #2da2e6; color: white; font-size:12px;" >
+			<th scope="col" style="width: 255px;">Documento</th>
+			<th scope="col" style="width: 120px">N° Cliente</th>
+			<th scope="col" style="width: 100px">Monto</th>
+			<th scope="col" style="width: 100px">Pagar</th>
+			</tr>
+			{{#each servicios}} 
+			<tr style="font-size:12px;" align="center">
+			<td	style="width: 255px"><a href="{{../urlsgc}}{{String.Base64UrlEncode (Encriptar (Concat empresa.IdEmpresa "|" id_servicio "|" id_proceso "|" no_doc))}}">{{nom_tipo_doc}} N°{{no_doc}}.</a></td>
+			<td style="width: 120px">{{id_servicio}}</td>
+			<td style="width: 100px">$ ({{Format total_pagar "N0" "es-CL"}})</td>
+			<td style="width: 100px"><a href="https://recaudadordev.asyntec.com/{{urlPago id_servicio total_pagar empresa.IdEmpresa}}" style="-webkit-text-size-adjust: none; text-decoration: none; color: #ffffff; background-color: #2da2e6; border-radius: 60px; -webkit-border-radius: 60px; -moz-border-radius: 60px; width: auto;  font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; text-align: center; mso-border-alt: none; word-break: keep-all; position: relative; left: 10px" target="_blank">
+            <span style="display:inline-block;letter-spacing:undefined;">
+              <span style="font-size: 12px; margin: 5px; line-height: 1.5; word-break: break-word; mso-line-height-alt: 32px;">
+                <strong>Pago Online</strong>
+              </span>
+            </span>
+          	</a></td>
+			</tr>
+			{{/each}}
+		</table>
+		 
+ 		<div style="float: left">
+          <br />La información contenida en el presente correo electrónico es absolutamente confidencial y está dirigida únicamente a la dirección de correo señalada. <br />
+          <br />Si usted no es el receptor esperado de este correo electrónico, le agradecemos notificar a NOVAGUAS.
+        </p>
+        <p>Muchas gracias por utilizar nuestra Sucursal Virtual. <br />
+          <br />
+		</div>	         		
+		{{#if servicios}}
+		
+        <div align="center" class="button-container" style=" padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;">
+          <!--[if mso]>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+							<tr>
+								<td style="padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px" align="center">
+									<v:roundrect
+										xmlns:v="urn:schemas-microsoft-com:vml"
+										xmlns:w="urn:schemas-microsoft-com:office:word" href="https://recaudadordev.asyntec.com/{{urlPago id_servicio 2}}" style="height:31.5pt;width:110.25pt;v-text-anchor:middle;" arcsize="143%" stroke="false" fillcolor="#2da2e6">
+										<w:anchorlock/>
+										<v:textbox inset="0,0,0,0">
+											<center style="color:#ffffff; font-family:Tahoma, sans-serif; font-size:16px">
+												<![endif]-->
+          {{else}}<a href="https://recaudadordev.asyntec.com/{{urlPago id_servicio 2}}" style="-webkit-text-size-adjust: none; text-decoration: none; display: inline-block; color: #ffffff; background-color: #2da2e6; border-radius: 60px; -webkit-border-radius: 60px; -moz-border-radius: 60px; width: auto; width: auto; border-top: 1px solid #2da2e6; border-right: 1px solid #2da2e6; border-bottom: 1px solid #2da2e6; border-left: 1px solid #2da2e6; padding-top: 5px; padding-bottom: 5px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; text-align: center; mso-border-alt: none; word-break: keep-all;" target="_blank">
+            <span style="padding-left:15px;padding-right:15px;font-size:16px;display:inline-block;letter-spacing:undefined;">
+              <span style="font-size: 16px; margin: 0; line-height: 2; word-break: break-word; mso-line-height-alt: 32px;">
+                <strong>Pago Online</strong>
+              </span>
+            </span>
+          </a>{{/if}}
+</table>
+        </p>
+        
+          <!--[if mso]>
+											</center>
+										</v:textbox>
+									</v:roundrect>
+								</td>
+							</tr>
+						</table>
+						<![endif]-->
+        </div>
+      </td>
+      
+      <td style="width: 10px;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table class="borde" style="width: 600px;" cellspacing="0" cellpadding="1" align="center" bgcolor="#3aa1cf">
+  <tbody>
+    <tr>
+      <td style="height: 10px; width: 10px;">&nbsp;</td>
+      <td style="height: 10px; width: 565px;">&nbsp;</td>
+      <td style="height: 10px; width: 10px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="width: 10px;">&nbsp;</td>
+      <td style="text-align: center; font-family: verdana; width: 565px;">
+        <span style="color: #fff;">Oficina Comercial: La Montaña Norte N°4608, Lampa.</span>
+      </td>
+      <td style="width: 10px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="width: 10px;">&nbsp;</td>
+      <td style="text-align: center; font-family: verdana; width: 565px;">
+        <span style="color: #fff;">Teléfonos: <a style="color: #fff; text-decoration: none;" href="tel:+56228695000">(+562) 2869 5000</a>
+        </span>
+      </td>
+      <td style="width: 10px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="height: 10px; width: 10px;">&nbsp;</td>
+      <td style="height: 10px; width: 565px;">&nbsp;</td>
+      <td style="height: 10px; width: 10px;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>

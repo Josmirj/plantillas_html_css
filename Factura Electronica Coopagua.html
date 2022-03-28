@@ -1,0 +1,601 @@
+<html>
+<head>
+<style>
+@page { 
+size: A5 portrait;
+margin:0px;
+}
+body {
+margin:0px;
+}	
+table {
+font-family: Helvetica, sans-serif;
+font-size: 10px!important;
+width:557px;
+margin:0px auto;
+}
+:root {
+
+/* Colors: */
+--rojo: #FA3636;
+--negro: #060606;
+--amarillo: #FFF04F;
+--azul: #006DB2;
+--blanco: #FFFFFF;
+}
+.txt-rojo{
+color: var(--rojo);	
+}
+.txt-azul{
+color: var(--azul);	
+}
+.txt-negro{
+color: var(--negro);	
+}
+#contenedor-Principal{
+width:557px;
+}
+.seccion-1{
+float: left;
+width: 545px;
+height: 100px;
+margin: 5px;	
+}	
+.seccion1-logos{
+float: left;
+width: 160px;
+height: 100px;
+color: #78b979;
+}
+.seccion1-cuadros{
+float: left;
+position: relative;	
+left: 5px;	
+width: 380px;
+height: 100px;
+}
+.seccion1-cazul{
+float: left;
+width: 195px;
+height: 100px;
+border-radius: 6px;
+font-family: Helvetica, "sans-serif";
+}
+.borde-cliente{
+position: relative;
+left: 5px;	
+width: 190px;
+height: 35px;	
+border: 2px solid #077E07;	
+}	
+.seccion1-crojo{
+float: left;
+position: relative;
+left: 10px;	
+width: 170px;
+height: 90px;
+border: 3px solid #F90404;
+color: var (--rojo);
+font-family: Helvetica, "sans-serif";
+}
+.seccion-2{
+float: left;
+position: relative;
+width: 552px;
+height: auto;	
+}
+.seccion2-cuerpo{
+border-radius: 7px;
+width: 750px;
+border:1px solid #070705;	
+}
+preImpreso .seccion2-cuerpo{
+background-color: transparent;
+}
+.seccion2-column1{
+float: left;
+position: relative;
+left: 5px;	
+bottom: 12px;;	
+width: 265px;
+height: auto;
+}
+.seccion-cliente{
+float: left;
+width:260px;
+height:80px;
+border:2px solid #077E07;
+border-radius: 7px;
+font-size:8px; 	
+}
+.detalle-consumo{
+float: left;
+position: relative;
+top:5px;	
+width: 265px;
+height: 210px;	
+
+background-color:#F3F3F3;
+border-radius:7px;
+font-size: 8px;	
+}
+.titulo-detalle-consumo{
+padding: .5em 1em;
+font-weight: 530;
+font-size: 1em;
+background-color:#077E07;
+color:#FFFFFF;
+border-top-left-radius: 3px;
+border-top-right-radius:3px;
+font-size: 9px;	
+}	
+.consumo-cuerpo {
+position: relative;
+top:5px;	
+width: 260px;
+height: 175px;
+color: black;
+}
+.detalle-cuenta{
+float: left;
+position: relative;
+top:10px;	
+width: 265px;
+height:180px;	
+background-color:#F3F3F3;
+border-radius:7px;
+font-size: 8px;	
+}
+.titulo-detalle-cuenta{
+padding: .5em 1em;
+font-weight: 530;
+font-size: 1em;
+background-color:#077E07;
+color:#FFFFFF;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+font-size: 9px;	
+}	
+.cuenta-cuerpo {
+position: relative;
+left: 5px;	
+top:5px;	
+width: 260px;
+height: 150px;
+color: black;
+}
+.infocuenta-cuerpo {
+position: relative;
+left: 5px;	
+top:5px;	
+width: 260px;
+height: 140px;
+color: black;
+}
+.cuenta-coopcuerpo {
+position: relative;
+left: 5px;	
+top:5px;	
+width: 260px;
+height: 145px;
+color: black;
+}	
+.seccion-timbre{
+position: relative;
+top:12px;
+float: left;	
+width: 260px;
+height: 110px;
+}	
+.seccion2-column2{
+float: left;
+position: relative;
+left: 16px;	
+width: 270px;
+height: auto;
+}
+.titulo-femision{
+width: 270px;
+height: 23px;	
+background-color:#077E07;
+color:#FFFFFF;
+border-radius: 4px;
+}	
+.titulo-tpagar{
+position: relative;
+top:2px;	
+width: 270px;
+height: 23px;	
+background-color:#077E07;
+color:#FFFFFF;
+border-radius: 4px;
+}	
+.titulo-vencimiento{
+position: relative;
+top:4px;	
+width: 270px;
+height: 23px;	
+background-color:#077E07;
+color:#FFFFFF;
+border-radius: 4px;
+}			
+.recuadro-grafico{
+position: relative;
+top: 10px;
+width: 266px;
+height: 110px;	
+background-color:#ffffff;
+border:2px solid #077E07;
+border-radius:7px;
+font-size: 8px;	
+}	
+.info-cuenta{
+float: left;
+position: relative;
+top:14px;	
+width: 270px;
+height: 170px;	
+background-color:#F3F3F3;
+border-radius:7px;
+font-size:8px;
+}
+.titulo-info-cuenta{
+padding: .5em 1em;
+font-weight: 530;
+font-size: 1em;
+background-color:#077E07;
+color:#FFFFFF;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+font-size: 9px;	
+}
+.coopagua-informa{
+float: left;
+position: relative;
+top:18px;	
+width: 270px;
+height: 200px;	
+background-color:#F3F3F3;
+border-radius:7px;
+font-size:8px;	
+}
+.titulo-coopagua-informa{
+padding: .5em 1em;
+font-weight: 530;
+font-size: 1em;
+background-color:#077E07;
+color:#FFFFFF;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;		
+font-size: 9px;	
+}		
+/*Graficos*/
+.codbarra{
+height: 30px;
+width: 260px;
+background-repeat: no-repeat;	
+background-size: 70% 100%;
+}
+.timbre-electronico{
+position:relative;
+width:250px;
+height:90px;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+</style>
+</head>
+<table  border="0" cellspacing="0">
+	<tr>
+	<td>
+	<div id="contenedor-Principal">
+	<div style="float:left; position:relative;bottom:1px;left: -3px; width: 170px;height: 12px;background-color: #077E07"></div>
+	<div class="seccion-1">
+		<div class="seccion1-logos">
+		  <img height="40" width="100" src="{{logo}}" alt="logo_empresa" style="position: relative;top: 2px;"></img>
+		  <p style="font-size: 7px;position: relative; bottom: 5px;">Cooperativa de Agua Potable Santo Domingo Ltda <br>Prestación de Servicios Sanitarios <br>R.U.T.: 70.011.730-8 <br>Griselda N°21 - Fono Fax (35) 2441501 <br>copagua@copagua.cl</p>
+		</div>
+		
+		<div class="seccion1-cuadros">
+		  <div class="seccion1-cazul" >
+		  <div style="text-align: center;color: #78b979;font-size: 9px">
+		  <p><strong>Sobre su cuenta Fono FAX (35) 2441501 <br>Emergencias (9) 7 7093614</strong></p>	
+		  </div>
+			
+		  <div class="borde-cliente" style="font-size: 11px">
+		    <div style="float: left;position: relative;bottom: 5px; width: 190px;font-size: 10px">
+			<p style="float: left;position: relative;left: 5px"><strong>N° de Cliente</strong></p>
+			<p style="float: right; position: relative;right: 5px; text-align: right"><strong>{{id_servicio_completo}}</strong></p>
+			</div>
+			<div style="float: left;position: relative;bottom: 20px; width: 190px;font-size: 10px">
+			<p style="float: left;position: relative;left: 5px"><strong>Ruta:</strong></p>
+			<p style="float: right; position: relative;right: 5px; text-align: right"><strong>{{cod_servicio}}</strong></p>
+			</div>
+		  </div>	
+		  </div>
+			
+		  <div class="seccion1-crojo" align="center">
+			<div class="txt-rojo" style="position: relative;bottom: 10px; width: 160px;height: 90px; text-align:center;font-size: 12px;">
+			<div style="float: left; position: relative; width:160px;height: 15px">
+			<p><strong>R.U.T.: 70.011.730-8</strong></p>
+			</div>
+			<div style="float: left; position: relative;top: 5px; width:160px;height: 30px">
+			<p><strong>FACTURA ELECTRÓNICA</strong></p>
+			</div>
+			<div style="float: left; position: relative; width:160px;height: 15px">	
+			<p><strong>N° {{folio}}</strong></p>
+			</div>
+			<div class="txt-rojo" align="center" style="position: relative; top:20px; font-size:8px;">
+			<p><strong>S.I.I - SANTO DOMINGO</strong></p>
+			</div>					  			
+		  </div>
+		</div>
+    </div>	
+	</div>
+		
+	
+	<div class="seccion2-column1">
+	<div class="seccion-cliente">
+	   <div style="float: left;position: relative;left: 5px; width: 250px;">
+	   <p style="float: left;position: relative;width: 250px;"><strong>{{nombre_cliente}}</strong></p>
+	   <p style="float: left;position: relative;bottom:15px;width: 250px;">{{dir_completa_cliente}}</p>
+	   <p style="float: left;position: relative;bottom:30px;width: 250px;">{{comuna}}</p>
+	   </div>	   
+	</div>
+	
+	<div class="detalle-consumo">
+	   <div class="titulo-detalle-consumo"><strong>DETALLE DE SU CONSUMO</strong></div>
+	   <div class="consumo-cuerpo">
+	   <div style="float: left;position: relative;left: 5px;width: 260px;height: 165px;">
+		  {{#if (Math.equal tipo_proceso 1)}}
+		  <div style="float: left;width:260px;height: 15px">
+		  <p style="float: left;width: 70px;text-align:left">Lectura Actual</p>
+		  <p style="float: left;position: relative;left: 50px;width: 105px;text-align:left"><strong>{{Format fecha_lectura "dd/MM/yyyy"}}</strong></p>
+		  <p style="float: right;position: relative;right:5px;width: 85px;text-align:right">{{Format lectura "N0" "es-CL"}}</p>
+		  </div>	
+		  <div style="float: left;width:260px;height: 15px">
+		  <p style="float: left;width: 70px;height: 15px;text-align:left">Lectura Anterior</p>
+		  <p style="float: left;position: relative;left: 50px;width: 105px;text-align:left"><strong>{{Format fecha_ult_lectura "dd/MM/yyyy"}}</strong></p>
+		  <p style="float: right;position: relative;right:5px;width: 85px;text-align:right">{{Format ult_lect_efectiva "N0" "es-CL"}}</p>
+		  </div>
+		  <div style="float: left;width:260px;height: 15px">
+		  <p style="float: left;width: 125px;text-align:left">Consumo Periodo</p>
+		  <p style="float: right;position: relative;right:5px;width: 135px;text-align:right">{{Format consumo "N0" "es-CL"}} (MT3)</p>
+		  </div>
+		  <div style="float: left;width:260px;height: 15px">
+		  <p style="float: left;width: 125px;text-align:left">Clave Lectura</p>
+		  <p style="float: right;position: relative;right:5px;width: 135px;text-align:right">{{nom_clave_lectura}}</p>
+		  </div>
+		  {{#if consumo_descontable}}
+		  <div style="float: left;width:260px;height: 15px">
+		  <p style="float: left;width: 145px;text-align:left">MT3 Descontables</p>
+		  <p style="float: right;position: relative;right:5px;width: 115px;text-align:right">{{Format consumo_descontable "N0" "es-CL"}}</p>
+		  </div>
+		  {{/if}}
+		  {{#if consumo_adicionable}} 
+		  <div style="float: left;width:260px;height: 15px">
+		  <p style="float: left;width: 145px;text-align:left">MT3 Adicionable</p>
+		  <p style="float: right;position: relative;right:5px;width: 115px;text-align:right">{{Format consumo_adicionable "N0" "es-CL"}}</p>
+		  </div>
+		  {{/if}} 
+		  {{#if mts_por_abonar}} 
+		  <div style="float: left;width:260px;height: 15px">
+		  <p style="float: left;width: 145px;text-align:left">MT3 Por Abonar</p>
+		  <p style="float: right;position: relative;right:5px;width: 115px;text-align:right">{{Format mts_por_abonar "N0" "es-CL"}}</p>
+		  </div>
+		  {{/if}}
+		  <div style="float: left;width:260px;height: 15px">
+		  <p style="float: left;text-align:left">{{observaciones}}</p>
+		  </div> 
+		  {{/if}}
+		  </div>
+		  </div>	
+	</div>
+		
+	<div class="detalle-cuenta">
+		<div class="titulo-detalle-cuenta"><strong>DETALLE DE CUENTA</strong></div>
+		<div class="cuenta-cuerpo">
+		<div style="float: left; width: 170px;height: 100px;text-align:left;line-height: 60%">
+		{{# each detalle}}
+ 		<p>{{nom_grupo_doc}}{{#if nom_corto_unidad}}
+		{{#if sum_unidades}} 
+		{{#Regex.IsMatch nom_corto_unidad "C/U" "i"}} 
+		{{else}} 
+		({{String.Format ../sum_unidades "N0"}} {{../nom_corto_unidad}}) 
+		{{/Regex.IsMatch}} 
+		{{/if}}
+		{{/if}}
+		</p>
+		{{/each}}
+		</div>	
+		<div style="float: left;position: relative;left: 10px;width: 75px;height: 100px;text-align:right;line-height: 60%">
+		{{# each detalle}}
+		<p>
+		{{#if monto_signo}}
+		${{Format monto_signo "N0" "es-CL"}}
+		{{/if}}
+		</p>
+		{{/each}}
+		</div>
+				
+		<div style="float: left;width: 260px;height: 15px;font-size: 9px">
+		  <p style="float: left;"><strong>Total Venta Mes</strong></p>
+		  <p style="float: right;position: relative;right:5px;text-align: right"><strong>${{Format monto_periodo "N0" "es-CL"}}</strong></p>
+		</div>
+		{{#if saldo_anterior_total}}	
+		<div style="float: left;width: 260px;height: 15px;font-size: 9px">
+		  <p style="float: left;width: 70px"><strong>Saldo Anterior</strong></p>
+		  <p style="float: right;position: relative;right:5px; text-align: right;width: 180px"><strong>${{Format saldo_anterior_total "N0" "es-CL"}}</strong></p>
+		</div>
+		{{/if}}	
+		<div style="float: left; width: 260px;height: 15px;font-size: 9px">
+		  <p style="float: left;width: 70px"><strong>Total a Pagar</strong></p>
+		  <p style="float: right;position: relative;right:5px; text-align: right;width: 180px"><strong>${{Format total_pagar "N0" "es-CL"}}</strong></p>
+		</div>
+			
+ 		</div>
+		</div>
+		
+		<div class="seccion-timbre" align="center">
+			<div class="timbre-electronico" style="background-image: url({{CodBarras 1024 timbre}})"></div>
+			<p class="txt-negro" style="position: relative;right: 10px;;bottom:10px;font-size: 7px; line-height: 120%;width: 250px;text-align:center">Timbre Electrónico SII<br> Res.S.I.I N°80 (22/08/2014) Verifique documento: www.coopagua.cl</p>
+		</div>
+		<div style="float: left;position: relative;top:15px; width: 110px;height: 65px;line-height: 60%;font-size: 8px">
+			<p>Total a Pagar:</p>
+			<p>Fecha Vencimiento:</p>
+			<p>Fecha Emisión:</p>
+			<p>N° Servicio:</p>
+			<p>Boleta Electrónica Exenta:</p>						
+		</div>
+		<div style="float: left;position: relative;top:15px;left: 10px; width: 140px;height: 65px;line-height: 60%;text-align: right;font-size: 8px">
+		    <p>${{Format total_pagar "N0" "es-CL"}}</p>
+			<p>{{Format fecha_vcto "dd/MM/yyyy"}}</p>
+			<p>{{Format fecha_fact "dd/MM/yyyy"}}</p>
+			<p>{{id_servicio_completo}}</p>
+			<p>{{folio}}</p>
+	    </div>
+	</div>
+	<div class="seccion2-column2">
+		<div class="titulo-femision">
+		<div style="float: left;position: relative; bottom: 3px; width: 270px;font-size: 10px">
+		<p style="float: left;position: relative;left: 5px"><strong>Fecha de Emisión:</strong></p>
+		<p style="float: right; position: relative;right: 5px; text-align: right"><strong>{{Format fecha_fact "dd/MM/yyyy"}}</strong></p>
+		</div>
+		</div>
+		<div class="titulo-tpagar">
+		<div style="float: left;position: relative; bottom: 12px; width: 270px;font-size: 10px">
+		<p style="float: left;position: relative;left: 5px"><strong>Total a Pagar:</strong></p>
+		<p style="float: right; position: relative;right: 5px; text-align: right"><strong>${{Format total_pagar "N0" "es-CL"}}</strong></p>
+		</div>
+		</div>
+		<div class="titulo-vencimiento">
+		<div style="float: left;position: relative; bottom: 20px; width: 270px;font-size: 10px">
+		<p style="float: left;position: relative;left: 5px"><strong>Vencimiento:</strong></p>
+		<p style="float: right; position: relative;right: 5px; text-align: right"><strong>{{#if (Math.equal b_imprime_notif 1)}} Corte En Tramite {{else}}{{Format fecha_vcto "dd/MM/yyyy"}}{{/if}}</strong></p>
+		</div>
+		</div>
+		
+		<div class="recuadro-grafico" align="center">
+		<div style="position: relative;bottom:25px;width:260px;height: 90px">
+		{{#if (Math.equal tipo_proceso 1)}}
+				{{setVar "yData" (Enumerable.Select2 (Enumerable.Reverse datosConsumo) "consumo_fact_ap")}} 
+				{{setVar "xData" (Enumerable.Format (Enumerable.Select2 (Enumerable.Reverse datosConsumo) "fecha_fact" ) "SingleLetterMonthName" "es-CL")}}
+				<img src="{{Chart "240" "110" @xData @yData "{ 'type': 'bar', 'data': { 'labels': xData, 'datasets': [{ 'data': yData, 'backgroundColor': 'rgb(0, 13, 119)' }]}, 'options': { 'responsive': true,'maintainAspectRatio': false,'scales': { 'yAxes': [{ 'ticks': { 'beginAtZero': true, 'fontSize': 10 } }], 'xAxes': [{ 'ticks': { 'fontSize': 9 } }] }, 'title': { 'display': true, 'text': 'Consumo de los últimos 13 meses (MT3)', 'fontSize': 9 }, 'legend': { 'display': false }, 'animation': false }}"}}" style="display: block;"></img>
+				{{/if}}
+		</div>
+		</div>
+			
+		<div class="info-cuenta">
+		  <div class="titulo-info-cuenta"><strong>INFORMACIÓN ADICIONAL DE SU CUENTA</strong></div>
+			<div class="infocuenta-cuerpo">
+			<div style="float: left;width: 125px;height: 170px;line-height: 50%;">
+				{{# if (Math.equal tipo_proceso 1)}}
+				{{# if (Math.GreaterThan lim_sobreconsumo 0)}}	
+				<p>Limite Sobreconsumo</p>
+				{{/if}}
+				<p>Servicio</p>
+				<p>Factor de Cobro ({{dias_totales_ap}}) dias</p>
+				<p>Número Medidor</p>
+				<p>Diametro Medidor</p>	
+				<p>Grupo Tarifario</p>
+				{{#if consumo_troncal}} 
+				<p>Consumo Adicionales</p>
+				{{/if}}
+				{{#if dif_med_gral}}
+				<p>Diferencia Medidor General</p>
+				{{/if}}
+				{{#if prorrateo}} 
+				<p>Prorrateo</p>
+				{{/if}}
+				{{#if tipo_pago_automatico}}
+				<p>Tipo Pago Automatico</p>
+				{{/if}}
+				{{#if texto_punta}}
+				<p>Periodo</p>
+				{{/if}}
+				{{/if}}
+			</div>
+			<div style="float: left;position: relative;left: 20px; width: 115px;height: 140px;line-height: 50%;text-align: right">
+				{{# if (Math.equal tipo_proceso 1)}}
+				{{# if (Math.GreaterThan lim_sobreconsumo 0)}}	
+				<p>{{Format lim_sobreconsumo "N0"}}</p>
+				{{/if}}
+				<p>{{nom_tipo_suministro}}</p>
+				<p>{{factor_ap}}</p>
+				<p>{{no_medidor}}</p>
+				<p>{{diametro_efect}}</p>	
+				<p>{{nom_grupo_precio}}</p>
+				{{#if consumo_troncal}} 
+				<p>{{Format consumo_troncal "N0"}}</p>
+				{{/if}}
+				{{#if dif_med_gral}}
+				<p>{{Format dif_med_gral "N0"}}</p>
+				{{/if}}
+				{{#if prorrateo}}
+				<p>{{Format texto_prorrateo "N0"}}</p>
+				{{/if}}	
+				{{#if tipo_pago_automatico}}
+				<p>{{tipo_pago_automatico}}</p>
+				{{/if}}	
+				{{#if texto_punta}}
+				<p>{{texto_punta}}</p>
+				{{/if}}	
+				{{/if}}
+				</div>		  
+			</div>
+		</div>	
+		<div class="coopagua-informa">
+		  <div class="titulo-coopagua-informa"><strong>COOPAGUA INFORMA</strong></div>
+			<div class="cuenta-coopcuerpo">
+			{{#if (Math.equal tipo_proceso 1)}}{{#if f_ult_pago }}
+			<div style="float: left;width:260px;height: 13px">
+		  	<p style="float: left;width: 60px;height: 15px; text-align:left">Último Pago</p>
+		  	<p style="float: left;position: relative;left: 50px;width: 100px;height: 15px;text-align:left"><strong>{{Format f_ult_pago "dd/MM/yyyy"}}</strong></p>
+		  	<p style="float: right;;width: 70px;height: 15px;text-align:right">${{Format total_pago "N0" "es-CL"}}</p>
+		  	</div>
+			{{/if}}	
+			<div style="float: left;width:260px;height: 15px">
+		  	<p style="float: left;width: 130px;height: 15px;text-align:left">Fecha Estimada Proxima Lectura</p>
+		  	<p style="float: right;width: 130px;height: 15px;text-align:right">{{Format fecha_prox_lect "dd/MM/yyyy"}}</p>
+		  	</div>
+			{{/if}}	
+			<div style="float: left;width: 140px;height: 70px;line-height: 50%;">
+				{{#if (Math.equal tipo_proceso 1)}}
+				<p>Cargo Fijo (MT3)</p>
+				<p>Consumo Agua No Punta (MT3)</p>
+				<p>Consumo Agua Punta (MT3)</p>	
+				<p>Sobre Consumo (MT3)</p>
+				<p>Uso Alcantarillado (MT3)</p>
+				{{/if}}
+			</div>
+			<div style="float: left;width: 120px;height: 70px;line-height: 50%;text-align: right">
+				{{#if (Math.equal tipo_proceso 1)}}
+				<p>${{Format valorcargofijo "N0" "es-CL"}}</p>
+				<p>${{Format valoragua "F2"}}</p>
+				<p>${{Format valoraguapunta "F2"}}</p>	
+				<p>${{Format valorsobreconsumo "F2"}}</p>
+				<p>${{Format valorrecoleccion "F2"}}</p>
+				{{/if}}
+			</div>	  
+			{{#if texto_boleta}}
+			<div style="float: left;width: 260px;height: 30px;">
+				<p><strong>{{texto_boleta}}</strong></p>
+			</div>
+			{{/if}}	
+			</div>
+		</div>
+		<div style="float: left; position: relative;left:5px;top: 20px; width:260px ;height: 40px;" align="center">
+			<div class="codbarra" style="background-image: url({{CodBarras 16 (Format id_empresa "00")(Format cod_tipo_doc "000")(Format no_doc "00000000")(Format id_servicio "000000000")(Format 0 "00000000")(Format total_pagar "00000000")}});"align="center"></div>
+		</div>
+		
+		<div style="float:right;position:relative;top:17px;">
+		<img height="40" width="100" src="{{logo}}" alt="logo_empresa" style="position: relative;top: 2px;"></img>
+		</div>
+
+		<div style="float: left; position:relative;top:71px;left: 111px;width: 170px;height: 12px;background-color: #077E07"></div>
+	
+	</div>	
+	</td>
+    </tr>
+</table>
+</html>
